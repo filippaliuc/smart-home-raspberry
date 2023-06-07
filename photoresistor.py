@@ -1,25 +1,25 @@
 import RPi.GPIO as GPIO
 from firebase import database
 
-GPIO.setmode(GPIO.BOARD)
-
-LIGHT_SENSOR = 15
-LED_PIN = 37
-
-GPIO.setup(LIGHT_SENSOR,GPIO.IN)
-GPIO.setup(LED_PIN,GPIO.OUT)
-
 def getLightIntensity():
+
+    LIGHT_SENSOR = 15
+    LED_PIN = 37
+
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(LIGHT_SENSOR,GPIO.IN)
+    GPIO.setup(LED_PIN,GPIO.OUT)
 
     isLight = GPIO.input(LIGHT_SENSOR)
 
-    print("E lumina: ",isLight)
-    # database.child("semnale").child("lumina").set(isLight)
-
     if(not isLight):
+        print("Nu e lumina")
         GPIO.output(LED_PIN,GPIO.LOW)
     else:
+        print("e lumina")
         GPIO.output(LED_PIN,GPIO.HIGH)
 
+    GPIO.cleanup()
+    
     return isLight
     

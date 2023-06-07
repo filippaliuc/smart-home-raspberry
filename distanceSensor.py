@@ -5,10 +5,6 @@ from firebase import database
 HCSR40_TRIGGER = 29
 HCSR40_ECHO = 31
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(HCSR40_TRIGGER, GPIO.OUT)
-GPIO.setup(HCSR40_ECHO, GPIO.IN)
-
 def pingDistanceSensor():
 
     GPIO.output(HCSR40_TRIGGER, GPIO.LOW)
@@ -28,7 +24,12 @@ def pingDistanceSensor():
 
 def getDistance():
 
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(HCSR40_TRIGGER, GPIO.OUT)
+    GPIO.setup(HCSR40_ECHO, GPIO.IN)
+
     pingDistanceSensor()
+
 
     while GPIO.input(HCSR40_ECHO)==0:
         pulse_start_time = time.time()
@@ -42,5 +43,6 @@ def getDistance():
 
     # database.child("semnale").child("distanta(cm)").set(distance)
 
+    GPIO.cleanup()
     return distance
 
