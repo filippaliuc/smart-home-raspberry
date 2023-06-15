@@ -5,29 +5,23 @@ dataPin = 36
 latchPin = 38
 clockPin = 40
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(dataPin,GPIO.OUT)
-GPIO.setup(latchPin,GPIO.OUT)
-GPIO.setup(clockPin,GPIO.OUT)
 
-def changeLedState(binaryValue):
+def controlLedState(binaryValue):
 
-    # GPIO.output(clockPin, GPIO.LOW)
-    # GPIO.output(latchPin, GPIO.LOW)
-    # GPIO.output(clockPin, GPIO.HIGH)
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(dataPin,GPIO.OUT)
+    GPIO.setup(latchPin,GPIO.OUT)
+    GPIO.setup(clockPin,GPIO.OUT)
 
-    for _ in range (8):
-        GPIO.output(dataPin, (binaryValue >> 7) & 1)
+    GPIO.output(latchPin, GPIO.LOW)
+
+    for i in range (4):
+        GPIO.output(dataPin, int(binaryValue[i-1]))
         GPIO.output(clockPin, GPIO.HIGH)
         GPIO.output(clockPin, GPIO.LOW)
-        binaryValue <<= 1
 
-    GPIO.output(clockPin, GPIO.LOW)
     GPIO.output(latchPin, GPIO.HIGH)
-    GPIO.output(latchPin, GPIO.LOW)
-    GPIO.output(clockPin, GPIO.HIGH)
+
+    # GPIO.cleanup()
 
 
-changeLedState(0b0000)
-
-GPIO.cleanup()
