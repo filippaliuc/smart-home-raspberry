@@ -3,14 +3,18 @@ from photoresistor import getLightIntensity
 from distanceSensor import getDistance
 from flameSensor import getFlame
 from leds import controlLedState
-from buzzer import triggerFireAlarm
 from firebase import database
+from relay import controlHumidity
 
 import RPi.GPIO as GPIO
 import time
 import threading
 
+import math
+
 GPIO.setwarnings(False)
+
+alarm_active = threading.Event()
 
 def writeDataToFirebase():
     temperature, humidity = getHumidityAndTemperature()
@@ -38,30 +42,22 @@ def booleanToBinary(lights):
     binary_string = format(binary_value, '04b')
     print(binary_string)
     return binary_string
-
-
-
+         
 try: 
-
-    stop_event = threading.Event()
-    thread = threading.Thread(target=triggerFireAlarm)  
     while True:
         # writeDataToFirebase()
         alarm, blinds, lights, temperature, humidity = readDataFromFirebase()
-        binary_string_of_lights = booleanToBinary(lights=lights)
-        print(type(binary_string_of_lights))
         
-        controlLedState(binaryValue=binary_string_of_lights)
+        # binary_string_of_lights = booleanToBinary(lights=lights)
+        # controlLedState(binaryValue=binary_string_of_lights)
 
-        is_flame = getFlame()
-        if(not thread.is_alive()):
-            if(is_flame == 1):
-                thread.start()
-            else: 
-                stop_event.set()
-      
+        is_flame_new = getFlame()
+        print("foc", is_flame_new)
+
+        # controlHumidity(humidity=humidity)
         
-        time.sleep(1)
+        
+        time.sleep(0.5)
 
 
 except KeyboardInterrupt:
