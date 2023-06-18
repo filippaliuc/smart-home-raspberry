@@ -5,22 +5,19 @@ from flameSensor import getFlame
 from leds import controlLedState
 from firebase import database
 from relay import controlHumidity
+from cloudwatchService import cloudwatch
 
 import RPi.GPIO as GPIO
 import time
 import threading
 
-import math
-
 GPIO.setwarnings(False)
 
 alarm_active = threading.Event()
 
-def writeDataToFirebase():
-    temperature, humidity = getHumidityAndTemperature()
-    isLight = getLightIntensity()
-    distance = getDistance()
-    flame = getFlame()
+
+def writeDataToFirebase(temperature, humidity, isLight, distance, flame):
+
     
     data = {
         "temperatura(C)":temperature,
@@ -42,17 +39,73 @@ def booleanToBinary(lights):
     binary_string = format(binary_value, '04b')
     print(binary_string)
     return binary_string
+
+def writeToAWSCloud(temperature, humidity, isLight, flame): 
+    
+    namespace = 'HOME_AUTOMATION_METRICS'
+
+    # Put metrics
+    cloudwatch.put_metric_data(
+        MetricData=[
+            {
+                'MetricName' : 'Temperatura Celsius',
+                'Unit' : 'None',
+                'Value' : temperature
+            },
+        ],
+        Namespace=namespace
+    )
+
+    cloudwatch.put_metric_data(
+        MetricData=[
+            {
+                'MetricName' : 'Umiditate',
+                'Unit' : 'None',
+                'Value' : humidity
+            },
+        ],
+        Namespace=namespace
+    )   
+
+    cloudwatch.put_metric_data(
+        MetricData=[
+            {
+                'MetricName' : 'Lumina',
+                'Unit' : 'None',
+                'Value' : isLight
+            },
+        ],
+        Namespace=namespace
+    )   
+
+    cloudwatch.put_metric_data(
+        MetricData=[
+            {
+                'MetricName' : 'Foc',
+                'Unit' : 'None',
+                'Value' : flame
+            },
+        ],
+        Namespace=namespace
+    )   
+
+
+
          
 try: 
+
     while True:
-        # writeDataToFirebase()
+        temperature, humidity = getHumidityAndTemperature()
+        isLight = getLightIntensity()
+        distance = getDistance()
+        flame = getFlame()
+
+        writeDataToFirebase(temperature, humidity, isLight, distance, flame)
+        writeToAWSCloud(temperature, humidity, isLight, flame)
         alarm, blinds, lights, temperature, humidity = readDataFromFirebase()
         
         # binary_string_of_lights = booleanToBinary(lights=lights)
         # controlLedState(binaryValue=binary_string_of_lights)
-
-        is_flame_new = getFlame()
-        print("foc", is_flame_new)
 
         # controlHumidity(humidity=humidity)
         

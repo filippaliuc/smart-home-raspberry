@@ -8,7 +8,8 @@ def getFlame():
 	GPIO.setup(FLAME_SENSOR,GPIO. IN)
 	
 	isFlame = GPIO.input(FLAME_SENSOR)
-
+	print("foc", isFlame)
+	
 	GPIO.cleanup()
 	
 	return isFlame
