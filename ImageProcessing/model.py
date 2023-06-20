@@ -1,60 +1,142 @@
-import cv2
-import sys
-import numpy as np
-import tflite_runtime.interpreter as tflite
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+import os
+import torch
+import torchvision
+import torch.nn as nn # All neural network modules, nn.Linear, nn.Conv2d, BatchNorm, Loss functions
+import torchvision.datasets as datasets # Has standard datasets we can import in a nice way
+import torchvision.transforms as transforms # Transformations we can perform on our dataset
+import torch.nn.functional as F # All functions that don't have any parameters
+from torch.utils.data import DataLoader, Dataset # Gives easier dataset managment and creates mini batches
+from torchvision.datasets import ImageFolder
+import torch.optim as optim # For all Optimization algorithms, SGD, Adam, etc.
+from PIL import Image
 
-def preprocess_image(image, input_shape):
-    resized_image = cv2.resize(image, (input_shape[1], input_shape[2]))
-    grayscale_image = cv2.cvtColor(resized_image, cv2.COLOR_BGR2GRAY)
-    normalized_image = grayscale_image.astype(np.float32) / 255.0
-    reshaped_image = np.reshape(normalized_image, input_shape)
-    return reshaped_image
+from tqdm import tqdm
+from torchvision import models
 
-# Define the class labels or mapping
-class_labels = ["Dog", "Cat"]  # Replace with your class labels
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # use gpu or cpu
 
-# Load the TensorFlow Lite model
-interpreter = tflite.Interpreter(model_path='/home/filippaliuc/Desktop/Programare/PetRecognition/converted_tflite_1000/vww_96_grayscale_quantized.tflite')
-interpreter.allocate_tensors()
+from sklearn.model_selection import train_test_split
+dataset = ImageFolder("cat-and-dog/training_set/training_set/")
+train_data, test_data, train_label, test_label = train_test_split(dataset.imgs, dataset.targets, test_size=0.2, random_state=42)
 
-input_details = interpreter.get_input_details()
-output_details = interpreter.get_output_details()
+# ImageLoader Class
 
-# Get the input shape of the model
-input_shape = input_details[0]['shape']
+class ImageLoader(Dataset):
+    def __init__(self, dataset, transform=None):
+        self.dataset = self.checkChannel(dataset) # some images are CMYK, Grayscale, check only RGB 
+        self.transform = transform
+    
+    def __len__(self):
+        return len(self.dataset)
+    
+    def __getitem__(self, item):
+        image = Image.open(self.dataset[item][0])
+        classCategory = self.dataset[item][1]
+        if self.transform:
+            image = self.transform(image)
+        return image, classCategory
+        
+    
+    def checkChannel(self, dataset):
+        datasetRGB = []
+        for index in range(len(dataset)):
+            if (Image.open(dataset[index][0]).getbands() == ("R", "G", "B")): # Check Channels
+                datasetRGB.append(dataset[index])
+        return datasetRGB
 
-# Load and preprocess the local photo image
-if len(sys.argv) < 2:
-    print("Please provide the image path as a command-line argument.")
-    sys.exit(1)
+train_transform = transforms.Compose([
+    transforms.Resize((224, 224)), transforms.ToTensor(), transforms.Normalize([0.5]*3, [0.5]*3)
+]) # train transform
 
-image_path = sys.argv[1]
-image = cv2.imread(image_path)
+test_transform = transforms.Compose([
+    transforms.Resize((224, 224)), transforms.ToTensor(), transforms.Normalize([0.5]*3, [0.5]*3)
+]) # test transform
 
-# Preprocess the image
-input_data = preprocess_image(image, input_shape)
+train_dataset = ImageLoader(train_data, train_transform)
+test_dataset = ImageLoader(test_data, test_transform)
+    
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=64, shuffle=True)
 
-# Set the input tensor
-interpreter.set_tensor(input_details[0]['index'], input_data)
+# load pretrain model and modify...
+model = models.resnet50(weights=True)
 
-# Perform inference using the TensorFlow Lite model
-interpreter.invoke()
+# If you want to do finetuning then set requires_grad = False
+# Remove these two lines if you want to train entire model,
+# and only want to load the pretrain weights.
 
-# Get the output tensor
-output_data = interpreter.get_tensor(output_details[0]['index'])
+for param in model.parameters():
+    param.requires_grad = False
 
-# Postprocess the output data as needed
+num_ftrs = model.fc.in_features
+model.fc = nn.Linear(num_ftrs, 2)
 
-# Get the predicted class label
-predicted_class_index = np.argmax(output_data)
-predicted_class_label = class_labels[predicted_class_index]
+model.to(device)
 
-# Print the predicted class
-print(output_data)
-print("Predicted Class:", predicted_class_label)
+# Loss and optimizer
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=0.01)
 
-# Display the results or perform actions based on the predictions
 
-# cv2.imshow('Image', image)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
+# Train and test
+
+def train(num_epoch, model):
+    for epoch in range(0, num_epoch):
+#         current_loss = 0.0
+#         current_corrects = 0
+        losses = []
+        model.train()
+        loop = tqdm(enumerate(train_loader), total=len(train_loader)) # create a progress bar
+        for batch_idx, (data, targets) in loop:
+            data = data.to(device=device)
+            targets = targets.to(device=device)
+            scores = model(data)
+            
+            loss = criterion(scores, targets)
+            optimizer.zero_grad()
+            losses.append(loss)
+            loss.backward()
+            optimizer.step()
+            _, preds = torch.max(scores, 1)
+#             current_loss += loss.item() * data.size(0)
+#             current_corrects += (preds == targets).sum().item()
+#             accuracy = int(current_corrects / len(train_loader.dataset) * 100)
+            loop.set_description(f"Epoch {epoch+1}/{num_epoch} process: {int((batch_idx / len(train_loader)) * 100)}")
+            loop.set_postfix(loss=loss.data.item())
+        
+        # save model
+        torch.save({ 
+                    'model_state_dict': model.state_dict(), 
+                    'optimizer_state_dict': optimizer.state_dict(), 
+                    }, 'checpoint_epoch_'+str(epoch)+'.pt')
+
+
+        
+# model.eval() is a kind of switch for some specific layers/parts of the model that behave differently,
+# during training and inference (evaluating) time. For example, Dropouts Layers, BatchNorm Layers etc. 
+# You need to turn off them during model evaluation, and .eval() will do it for you. In addition, 
+# the common practice for evaluating/validation is using torch.no_grad() in pair with model.eval() 
+# to turn off gradients computation:
+        
+def test():
+    model.eval()
+    test_loss = 0
+    correct = 0
+    with torch.no_grad():
+        for x, y in test_loader:
+            x = x.to(device)
+            y = y.to(device)
+            output = model(x)
+            _, predictions = torch.max(output, 1)
+            correct += (predictions == y).sum().item()
+            test_loss = criterion(output, y)
+            
+    test_loss /= len(test_loader.dataset)
+    print("Average Loss: ", test_loss, "  Accuracy: ", correct, " / ",
+    len(test_loader.dataset), "  ", int(correct / len(test_loader.dataset) * 100), "%")
+
+if __name__ == "__main__":
+    train(5, model) # train
+    test() # test
