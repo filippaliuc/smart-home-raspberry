@@ -13,10 +13,10 @@ def getLightIntensity():
     isLight = GPIO.input(LIGHT_SENSOR)
 
     if(isLight):
-        print("Nu e lumina")
+        print("lumina 1")
         GPIO.output(LED_PIN,GPIO.LOW)
     else:
-        print("e lumina")
+        print("lumina 0")
         GPIO.output(LED_PIN,GPIO.HIGH)
 
     GPIO.cleanup()

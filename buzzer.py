@@ -1,8 +1,9 @@
 import RPi.GPIO as GPIO
 import math
-from time import sleep
+from time import sleep	
+from flameSensor import getFlame
 
-def triggerFireAlarm(is_flame):
+def triggerFireAlarm():
 
 	BUZZER_PIN = 22
 	GPIO.setmode(GPIO.BOARD)
@@ -13,7 +14,8 @@ def triggerFireAlarm(is_flame):
 	PWM.start(0)
 	
 	while True: 
-		if is_flame:
+		is_flame = getFlame()
+		if not is_flame:
 			PWM.start(50)
 			for x in range (0, 361):
 				sinVal = math.sin(x*(math.pi/180))
@@ -23,11 +25,4 @@ def triggerFireAlarm(is_flame):
 				# print("On")
 		else: 
 			PWM.stop()
-			break
 			# print("Off")
-	GPIO.cleanup()		
-
-triggerFireAlarm(1)
-sleep(3)
-triggerFireAlarm(0)
-sleep(3)
