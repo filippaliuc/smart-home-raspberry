@@ -114,44 +114,45 @@ def  upload_capture_to_storage():
             os.remove(image_path)
 
             time.sleep(2)
+    
+def cleanup():
+    alarm_thread.join()
+    send_photo_thread.join()
+    GPIO.cleanup()
+    print("\nDone")
 
-        print(datetime.datetime.now())
-        time.sleep(0.005)
 try: 
-    # alarm_thread = threading.Thread(target=triggerFireAlarm)
-    # alarm_thread.start()
+    alarm_thread = threading.Thread(target=triggerFireAlarm)
+    alarm_thread.start()
 
     send_photo_thread = threading.Thread(target=upload_capture_to_storage)
     send_photo_thread.start()
 
     while True:
-        # temperature, humidity = getHumidityAndTemperature()
-        # isLight = getLightIntensity()
-        distance = getDistance()
-        # is_flame = getFlame()
+        try:
+            temperature, humidity = getHumidityAndTemperature()
+            isLight = getLightIntensity()
+            distance = getDistance()
+            is_flame = getFlame()
 
-        print(distance)
-        # writeDataToFirebase(temperature, humidity, isLight, distance, is_flame)
-        # writeToAWSCloud(temperature, humidity, isLight, is_flame)
-        # alarm, blinds, lights, temperature, humidity = readDataFromFirebase()
+            print(distance)
+            writeDataToFirebase(temperature, humidity, isLight, distance, is_flame)
+            writeToAWSCloud(temperature, humidity, isLight, is_flame)
+            alarm, blinds, lights, temperature, humidity = readDataFromFirebase()
 
-        # takeCaputure(distance)
+            binary_string_of_lights = booleanToBinary(lights=lights)
+            controlLedState(binaryValue=binary_string_of_lights)
 
+            controlHumidity(humidity=humidity)
 
-        # triggerFireAlarm(is_flame)
+            time.sleep(0.0005)
 
+        except KeyboardInterrupt:
+            # Perform any necessary cleanup or logging here
+            break
 
-
-        # binary_string_of_lights = booleanToBinary(lights=lights)
-        # controlLedState(binaryValue=binary_string_of_lights)
-
-        # controlHumidity(humidity=humidity)
-        
-        # time.sleep(0.0005)
 
 
 except KeyboardInterrupt:
-    # alarm_thread.join()
-    send_photo_thread.join()
-    GPIO.cleanup()
-    print("\nDone")
+    cleanup()
+

@@ -41,6 +41,6 @@ def getDistance():
 
     # database.child("semnale").child("distanta(cm)").set(distance)
 
-    GPIO.cleanup()
+    # GPIO.cleanup()
     return distance
 
