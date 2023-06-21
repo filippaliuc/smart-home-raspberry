@@ -4,7 +4,7 @@ import time
 HCSR40_TRIGGER = 29
 HCSR40_ECHO = 31
 
-def pingDistanceSensor():
+def ping_distance_sensor():
 
     GPIO.output(HCSR40_TRIGGER, GPIO.LOW)
 
@@ -21,13 +21,13 @@ def pingDistanceSensor():
     GPIO.output(HCSR40_TRIGGER, GPIO.LOW)
 
 
-def getDistance():
+def get_distance():
 
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(HCSR40_TRIGGER, GPIO.OUT)
     GPIO.setup(HCSR40_ECHO, GPIO.IN)
 
-    pingDistanceSensor()
+    ping_distance_sensor()
 
     while GPIO.input(HCSR40_ECHO)==0:
         pulse_start_time = time.time()
@@ -37,10 +37,6 @@ def getDistance():
     pulse_duration = pulse_end_time - pulse_start_time
 
     distance = round(pulse_duration * 17150, 2)
-    # print("Distance : ",distance,"cm")
-
-    # database.child("semnale").child("distanta(cm)").set(distance)
-
-    # GPIO.cleanup()
+    
     return distance
 

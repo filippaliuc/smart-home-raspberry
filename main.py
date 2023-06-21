@@ -1,12 +1,12 @@
-from tempAndHumidity import getHumidityAndTemperature
-from photoresistor import getLightIntensity
-from distanceSensor import getDistance
-from flameSensor import getFlame
-from leds import controlLedState
+from tempAndHumidity import get_temperature_and_humidity
+from photoresistor import get_light_state
+from distanceSensor import get_distance
+from flameSensor import get_flame
+from leds import control_led_state
 from firebase import database, storage
-from relay import controlHumidity
+from relay import control_humidity
 from cloudwatchService import cloudwatch
-from buzzer import triggerFireAlarm
+from buzzer import trigger_fire_alarm
 from picamera import PiCamera
 
 import RPi.GPIO as GPIO
@@ -20,7 +20,7 @@ GPIO.setwarnings(False)
 distance = 0
 
 
-def writeDataToFirebase(temperature, humidity, isLight, distance, flame):
+def write_to_database(temperature, humidity, isLight, distance, flame):
 
     data = {
         "temperatura(C)":temperature,
@@ -31,19 +31,17 @@ def writeDataToFirebase(temperature, humidity, isLight, distance, flame):
     }
 
     database.child("semnale").set(data) 
-    # print(data)
 
-def readDataFromFirebase():
+def read_from_database():
     controls = database.child("control").get()
     return controls.val()["alarma"], controls.val()["jaluzele"], controls.val()["lumini"], controls.val()["temperatura"], controls.val()["umiditate"]
 
-def booleanToBinary(lights):
+def boolean_to_binary(lights):
     binary_value = int(lights["baie"]) * 8 + int(lights["bucatarie"]) * 4 + int(lights["dormitor"]) * 2 + int(lights["lampa"]) * 1
     binary_string = format(binary_value, '04b')
-    print(binary_string)
     return binary_string
 
-def writeToAWSCloud(temperature, humidity, isLight, flame): 
+def write_to_cloud(temperature, humidity, isLight, flame): 
     
     namespace = 'HOME_AUTOMATION_METRICS'
 
@@ -106,7 +104,7 @@ def  upload_capture_to_storage():
             time.sleep(2)
 
             camera.capture(image_path)
-            print("captured")
+            print("captured", datetime.datetime.now())
 
             camera.close()
 
@@ -122,7 +120,7 @@ def cleanup():
     print("\nDone")
 
 try: 
-    alarm_thread = threading.Thread(target=triggerFireAlarm)
+    alarm_thread = threading.Thread(target=trigger_fire_alarm)
     alarm_thread.start()
 
     send_photo_thread = threading.Thread(target=upload_capture_to_storage)
@@ -130,25 +128,24 @@ try:
 
     while True:
         try:
-            temperature, humidity = getHumidityAndTemperature()
-            isLight = getLightIntensity()
-            distance = getDistance()
-            is_flame = getFlame()
+            temperature, humidity = get_temperature_and_humidity()
+            is_light = get_light_state()
+            distance = get_distance()
+            is_flame = get_flame()
 
-            print(distance)
-            writeDataToFirebase(temperature, humidity, isLight, distance, is_flame)
-            writeToAWSCloud(temperature, humidity, isLight, is_flame)
-            alarm, blinds, lights, temperature, humidity = readDataFromFirebase()
+            print('Temp: {0:0.1f} C Humidity: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanta ', distance)
+            write_to_database(temperature, humidity, is_light, distance, is_flame)
+            write_to_cloud(temperature, humidity, is_light, is_flame)
+            alarm, blinds, lights, temperature, humidity = read_from_database()
 
-            binary_string_of_lights = booleanToBinary(lights=lights)
-            controlLedState(binaryValue=binary_string_of_lights)
+            binary_string_of_lights = boolean_to_binary(lights=lights)
+            control_led_state(binaryValue=binary_string_of_lights)
 
-            controlHumidity(humidity=humidity)
+            control_humidity(humidity=humidity)
 
             time.sleep(0.0005)
 
         except KeyboardInterrupt:
-            # Perform any necessary cleanup or logging here
             break
 
 

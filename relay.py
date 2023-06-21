@@ -1,18 +1,15 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-def controlHumidity(humidity):
+def control_humidity(humidity):
 	
-	input1Pin = 16
-	input2Pin = 18
+	INPUT1_PIN = 16
+	INPUT2_PIN = 18
 	GPIO.setmode(GPIO.BOARD)
-	GPIO.setup(input1Pin, GPIO.OUT)
-	GPIO.setup(input2Pin, GPIO.OUT)
+	GPIO.setup(INPUT1_PIN, GPIO.OUT)
+	GPIO.setup(INPUT2_PIN, GPIO.OUT)
 
-	print("ceva")
+	GPIO.output(INPUT1_PIN, humidity["umidificator"])
+	GPIO.output(INPUT2_PIN, humidity["dezumidificator"])
 
-	GPIO.output(input1Pin, humidity["umidificator"])
-	GPIO.output(input2Pin, humidity["dezumidificator"])
-
-	# GPIO.cleanup()
 

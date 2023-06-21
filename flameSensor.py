@@ -1,19 +1,11 @@
 import RPi.GPIO as GPIO
-import time
 
-def getFlame():
+def get_flame():
 	FLAME_SENSOR = 37
 
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(FLAME_SENSOR,GPIO. IN)
 	
-	isFlame = GPIO.input(FLAME_SENSOR)
-	# print("foc", isFlame)
+	is_flame = GPIO.input(FLAME_SENSOR)
 	
-	# GPIO.cleanup()
-	
-	return isFlame
-
-# while True: 
-# 	print("foc", getFlame())
-# 	time.sleep(1)
+	return is_flame

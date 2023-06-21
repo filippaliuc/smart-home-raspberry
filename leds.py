@@ -1,27 +1,25 @@
 import RPi.GPIO as GPIO
-from time import sleep
 
-dataPin = 36
-latchPin = 38
-clockPin = 40
+DATA_PIN = 36
+LATCH_PIN = 38
+CLOCK_PIN = 40
 
 
-def controlLedState(binaryValue):
+def control_led_state(binaryValue):
 
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(dataPin,GPIO.OUT)
-    GPIO.setup(latchPin,GPIO.OUT)
-    GPIO.setup(clockPin,GPIO.OUT)
+    GPIO.setup(DATA_PIN,GPIO.OUT)
+    GPIO.setup(LATCH_PIN,GPIO.OUT)
+    GPIO.setup(CLOCK_PIN,GPIO.OUT)
 
-    GPIO.output(latchPin, GPIO.LOW)
+    GPIO.output(LATCH_PIN, GPIO.LOW)
 
     for i in range (4):
-        GPIO.output(dataPin, int(binaryValue[i-1]))
-        GPIO.output(clockPin, GPIO.HIGH)
-        GPIO.output(clockPin, GPIO.LOW)
+        GPIO.output(DATA_PIN, int(binaryValue[i-1]))
+        GPIO.output(CLOCK_PIN, GPIO.HIGH)
+        GPIO.output(CLOCK_PIN, GPIO.LOW)
 
-    GPIO.output(latchPin, GPIO.HIGH)
+    GPIO.output(LATCH_PIN, GPIO.HIGH)
 
-    # GPIO.cleanup()
 
 
