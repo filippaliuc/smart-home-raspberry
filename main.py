@@ -3,20 +3,25 @@ from photoresistor import getLightIntensity
 from distanceSensor import getDistance
 from flameSensor import getFlame
 from leds import controlLedState
-from firebase import database
+from firebase import database, storage
 from relay import controlHumidity
 from cloudwatchService import cloudwatch
 from buzzer import triggerFireAlarm
+from picamera import PiCamera
 
 import RPi.GPIO as GPIO
 import time
 import threading
+import os
+import datetime
 
 GPIO.setwarnings(False)
 
+distance = 0
+
+
 def writeDataToFirebase(temperature, humidity, isLight, distance, flame):
 
-    
     data = {
         "temperatura(C)":temperature,
         "umiditate(%)":humidity,
@@ -87,16 +92,45 @@ def writeToAWSCloud(temperature, humidity, isLight, flame):
         Namespace=namespace
     )   
 
+def  upload_capture_to_storage():
+    while True:
+        database.child("predictie").child("compute").set(0)
+        if distance < 20 and distance > 15:
+            database.child("predictie").child("compute").set(1)
+
+            destination_path = 'model/pet_image.jpeg'
+            image_path = ("capture.jpeg")
+
+            camera = PiCamera()
+
+            time.sleep(2)
+
+            camera.capture(image_path)
+            print("captured")
+
+            camera.close()
+
+            storage.child(destination_path).put(image_path)
+            os.remove(image_path)
+
+            time.sleep(2)
+
+        print(datetime.datetime.now())
+        time.sleep(0.005)
 try: 
-    alarm_thread = threading.Thread(target=triggerFireAlarm)
-    alarm_thread.start()
+    # alarm_thread = threading.Thread(target=triggerFireAlarm)
+    # alarm_thread.start()
+
+    send_photo_thread = threading.Thread(target=upload_capture_to_storage)
+    send_photo_thread.start()
 
     while True:
         # temperature, humidity = getHumidityAndTemperature()
         # isLight = getLightIntensity()
-        # distance = getDistance()
-        is_flame = getFlame()
+        distance = getDistance()
+        # is_flame = getFlame()
 
+        print(distance)
         # writeDataToFirebase(temperature, humidity, isLight, distance, is_flame)
         # writeToAWSCloud(temperature, humidity, isLight, is_flame)
         # alarm, blinds, lights, temperature, humidity = readDataFromFirebase()
@@ -113,11 +147,11 @@ try:
 
         # controlHumidity(humidity=humidity)
         
-        
-        time.sleep(0.5)
+        # time.sleep(0.0005)
 
 
 except KeyboardInterrupt:
-    alarm_thread.join()
+    # alarm_thread.join()
+    send_photo_thread.join()
     GPIO.cleanup()
     print("\nDone")

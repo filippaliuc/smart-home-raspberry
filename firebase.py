@@ -1,5 +1,6 @@
 import pyrebase
 
+
 firebaseConfig = {
   "apiKey": "AIzaSyBlKwYLXbUPsK4IUQZ8_mhCBZeybiGh1kg",
   "authDomain": "intelligent-home-project.firebaseapp.com",
@@ -12,4 +13,9 @@ firebaseConfig = {
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 
+
 database = firebase.database()
+storage = firebase.storage()
+# storage_bucket = firebase.storage().bucket()
+
+
