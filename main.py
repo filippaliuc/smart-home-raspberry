@@ -25,7 +25,7 @@ distance = 0
 
 
 def write_to_database(temperature, humidity, isLight, distance, flame):
-    # Definim un dicționar pentru datele pe care dorim să le scriem în baza de date
+    # Definește un dicționar pentru datele pe care dorim să le scriem în baza de date
     data = {
         "temperatura(C)": temperature,
         "umiditate(%)": humidity,
@@ -34,28 +34,31 @@ def write_to_database(temperature, humidity, isLight, distance, flame):
         "foc": flame
     }
 
-    # Scriem datele în nodul "semnale" din baza de date
+    # Scrie datele în nodul "semnale" din baza de date
     database.child("semnale").set(data)
 
 
 def read_from_database():
-     # Citim valorile din nodul "control" din baza de date
+    # Citește valorile din nodul "control" din baza de date
     controls = database.child("control").get()
     
-    # Returnăm valorile specifice pentru alarma, jaluzele, lumini, temperatura și umiditate
+    # Returnează valorile specifice pentru alarma, jaluzele, lumini, temperatura și umiditate
     return controls.val()["alarma"], controls.val()["jaluzele"], controls.val()["lumini"], controls.val()["temperatura"], controls.val()["umiditate"]
 
 
 def boolean_to_binary(lights):
+    
+    # Convertește valorile de stare a luminilor din format boolean în format binar de tip șir de caractere
     binary_value = int(lights["baie"]) * 8 + int(lights["bucatarie"]) * 4 + int(lights["dormitor"]) * 2 + int(lights["lampa"]) * 1
     binary_string = format(binary_value, '04b')
     return binary_string
 
 def write_to_cloud(temperature, humidity, isLight, flame): 
     
+    # Definește un spațiu de nume pentru metricile care vor fi înregistrate în serviciul CloudWatch
     namespace = 'HOME_AUTOMATION_METRICS'
 
-    # Put metrics
+    # Înregistrează metrica pentru temperatură în CloudWatch
     cloudwatch.put_metric_data(
         MetricData=[
             {
@@ -67,6 +70,7 @@ def write_to_cloud(temperature, humidity, isLight, flame):
         Namespace=namespace
     )
 
+    # Înregistrează metrica pentru umiditate în CloudWatch
     cloudwatch.put_metric_data(
         MetricData=[
             {
@@ -102,34 +106,46 @@ def write_to_cloud(temperature, humidity, isLight, flame):
 
 def  upload_capture_to_storage():
     while True:
+        # Setează valoarea nodului "compute" din nodul "predictie" în baza de date la 0
         database.child("predictie").child("compute").set(0)
+        
+        # Verifică distanța față de hrănitor
         if distance < 20 and distance > 15:
+
+            # Setăm valoarea nodului "compute" din nodul "predictie" în baza de date la 1
             database.child("predictie").child("compute").set(1)
 
             destination_path = 'model/pet_image.jpeg'
-            image_path = ("capture.jpeg")
+            image_path = "capture.jpeg"
 
+            # Inițializăm camera Raspberry Pi
             camera = PiCamera()
 
             time.sleep(2)
 
+            # Capturăm imaginea
             camera.capture(image_path)
             print("captured", datetime.datetime.now())
 
+            # Închidem camera
             camera.close()
 
+            # Încărcăm imaginea în firebase storage
             storage.child(destination_path).put(image_path)
             os.remove(image_path)
 
             time.sleep(2)
 
 def cleanup():
+
+    # Așteptăm încheierea firelor de execuție pentru alarmă, încărcare imagine și hrănirea animalelor de companie
     alarm_thread.join()
     send_photo_thread.join()
     # feed_cat_thread.join()
     # feed_dog_thread.join()
+
+    # Eliberăm resursele GPIO
     GPIO.cleanup()
-    print("\nDone")
 
 try: 
     alarm_thread = threading.Thread(target=trigger_fire_alarm)

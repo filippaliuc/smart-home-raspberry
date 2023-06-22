@@ -13,8 +13,8 @@ from firebase import database
 
 
 def feed_cat():
-    # Controlul stării pinilor GPIO în funcție de valorile umidificatorului și dezumidificatorului
-    GPIO.output(INPUT1_PIN, GPIO.LOW)
+
+    # Controlul stării pinilor GPIO în funcție de predicție
     GPIO.output(INPUT2_PIN, GPIO.LOW)
 
     while True:
@@ -28,7 +28,7 @@ def feed_cat():
 
 def feed_dog():
 
-    # Controlul stării pinilor GPIO în funcție de valorile umidificatorului și dezumidificatorului
+    # Controlul stării pinilor GPIO în funcție de predicție
     GPIO.output(INPUT1_PIN, GPIO.LOW)
 
     while True:
