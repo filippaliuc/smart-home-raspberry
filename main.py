@@ -3,14 +3,17 @@ from photoresistor import get_light_state
 from distanceSensor import get_distance
 from flameSensor import get_flame
 from leds import control_led_state
-from firebase import database, storage
 from humidityController import control_humidity
 from temperatureController import control_air_conditioner
-from cloudwatchService import cloudwatch
 from buzzer import trigger_fire_alarm
-from picamera import PiCamera
+from petFeederController import feed_cat, feed_dog
+
+from firebase import database, storage
+from cloudwatchService import cloudwatch
 
 import RPi.GPIO as GPIO
+from picamera import PiCamera
+
 import time
 import threading
 import os
@@ -22,20 +25,26 @@ distance = 0
 
 
 def write_to_database(temperature, humidity, isLight, distance, flame):
-
+    # Definim un dicționar pentru datele pe care dorim să le scriem în baza de date
     data = {
-        "temperatura(C)":temperature,
-        "umiditate(%)":humidity,
-        "lumina":isLight,
-        "distanta(cm)":distance,
-        "foc":flame
+        "temperatura(C)": temperature,
+        "umiditate(%)": humidity,
+        "lumina": isLight,
+        "distanta(cm)": distance,
+        "foc": flame
     }
 
-    database.child("semnale").set(data) 
+    # Scriem datele în nodul "semnale" din baza de date
+    database.child("semnale").set(data)
+
 
 def read_from_database():
+     # Citim valorile din nodul "control" din baza de date
     controls = database.child("control").get()
+    
+    # Returnăm valorile specifice pentru alarma, jaluzele, lumini, temperatura și umiditate
     return controls.val()["alarma"], controls.val()["jaluzele"], controls.val()["lumini"], controls.val()["temperatura"], controls.val()["umiditate"]
+
 
 def boolean_to_binary(lights):
     binary_value = int(lights["baie"]) * 8 + int(lights["bucatarie"]) * 4 + int(lights["dormitor"]) * 2 + int(lights["lampa"]) * 1
@@ -114,20 +123,11 @@ def  upload_capture_to_storage():
 
             time.sleep(2)
 
-def feed_pet():
-    while True:
-        prediction = database.child("predictie").child("tip").get()
-        if prediction.val() == "Dog":
-            print("Dog")
-            time.sleep(10)
-        else:
-            print("Cat")
-            time.sleep(10)
-
 def cleanup():
     alarm_thread.join()
     send_photo_thread.join()
-    feed_pet_thread.join()
+    feed_cat_thread.join()
+    feed_dog_thread.join()
     GPIO.cleanup()
     print("\nDone")
 
@@ -138,8 +138,11 @@ try:
     send_photo_thread = threading.Thread(target=upload_capture_to_storage)
     send_photo_thread.start()
 
-    feed_pet_thread = threading.Thread(target=feed_pet)
-    feed_pet_thread.start()
+    feed_dog_thread = threading.Thread(target=feed_dog)
+    feed_dog_thread.start()
+
+    feed_cat_thread = threading.Thread(target=feed_cat)
+    feed_cat_thread.start()
 
     while True:
         try:
