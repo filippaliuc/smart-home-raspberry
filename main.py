@@ -6,7 +6,7 @@ from leds import control_led_state
 from humidityController import control_humidity
 from temperatureController import control_air_conditioner
 from buzzer import trigger_fire_alarm
-from petFeederController import feed_cat, feed_dog
+# from petFeederController import feed_cat, feed_dog
 
 from firebase import database, storage
 from cloudwatchService import cloudwatch
@@ -126,8 +126,8 @@ def  upload_capture_to_storage():
 def cleanup():
     alarm_thread.join()
     send_photo_thread.join()
-    feed_cat_thread.join()
-    feed_dog_thread.join()
+    # feed_cat_thread.join()
+    # feed_dog_thread.join()
     GPIO.cleanup()
     print("\nDone")
 
@@ -138,11 +138,11 @@ try:
     send_photo_thread = threading.Thread(target=upload_capture_to_storage)
     send_photo_thread.start()
 
-    feed_dog_thread = threading.Thread(target=feed_dog)
-    feed_dog_thread.start()
+    # feed_dog_thread = threading.Thread(target=feed_dog)
+    # feed_dog_thread.start()
 
-    feed_cat_thread = threading.Thread(target=feed_cat)
-    feed_cat_thread.start()
+    # feed_cat_thread = threading.Thread(target=feed_cat)
+    # feed_cat_thread.start()
 
     while True:
         try:
