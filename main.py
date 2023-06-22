@@ -148,11 +148,11 @@ def cleanup():
     GPIO.cleanup()
 
 try: 
-    alarm_thread = threading.Thread(target=trigger_fire_alarm)
-    alarm_thread.start()
+    # alarm_thread = threading.Thread(target=trigger_fire_alarm)
+    # alarm_thread.start()
 
-    send_photo_thread = threading.Thread(target=upload_capture_to_storage)
-    send_photo_thread.start()
+    # send_photo_thread = threading.Thread(target=upload_capture_to_storage)
+    # send_photo_thread.start()
 
     # feed_dog_thread = threading.Thread(target=feed_dog)
     # feed_dog_thread.start()
@@ -169,17 +169,17 @@ try:
 
             print('Temp: {0:0.1f} C Humidity: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanta ', distance)
 
-            write_to_database(temperature, humidity, is_light, distance, is_flame)
+            # write_to_database(temperature, humidity, is_light, distance, is_flame)
             write_to_cloud(temperature, humidity, is_light, is_flame)
 
-            alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
+            # alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
 
-            binary_string_of_lights = boolean_to_binary(lights=lights)
-            control_led_state(binaryValue=binary_string_of_lights)
+            # binary_string_of_lights = boolean_to_binary(lights=lights)
+            # control_led_state(binaryValue=binary_string_of_lights)
 
-            control_air_conditioner(temperature=temperature_controller)
+            # control_air_conditioner(temperature=temperature_controller)
 
-            control_humidity(humidity=humidity_controller)
+            # control_humidity(humidity=humidity_controller)
 
 
             time.sleep(0.0005)
