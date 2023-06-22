@@ -117,12 +117,12 @@ def  upload_capture_to_storage():
 def feed_pet():
     while True:
         prediction = database.child("predictie").child("tip").get()
-        if prediction == "Dog":
+        if prediction.val() == "Dog":
             print("Dog")
+	    time.sleep(10)
         else:
             print("Cat")
-    
-        sleep(10)
+    	    time.sleep(10)
 
 def cleanup():
     alarm_thread.join()
