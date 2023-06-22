@@ -4,7 +4,8 @@ from distanceSensor import get_distance
 from flameSensor import get_flame
 from leds import control_led_state
 from firebase import database, storage
-from relay import control_humidity
+from humidityController import control_humidity
+from temperatureController import control_air_conditioner
 from cloudwatchService import cloudwatch
 from buzzer import trigger_fire_alarm
 from picamera import PiCamera
@@ -134,14 +135,19 @@ try:
             is_flame = get_flame()
 
             print('Temp: {0:0.1f} C Humidity: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanta ', distance)
+
             write_to_database(temperature, humidity, is_light, distance, is_flame)
             write_to_cloud(temperature, humidity, is_light, is_flame)
-            alarm, blinds, lights, temperature, humidity = read_from_database()
+
+            alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
 
             binary_string_of_lights = boolean_to_binary(lights=lights)
             control_led_state(binaryValue=binary_string_of_lights)
 
-            control_humidity(humidity=humidity)
+            control_air_conditioner(temperature=temperature_controller)
+
+            control_humidity(humidity=humidity_controller)
+
 
             time.sleep(0.0005)
 
