@@ -113,10 +113,21 @@ def  upload_capture_to_storage():
             os.remove(image_path)
 
             time.sleep(2)
+
+def feed_pet():
+    while True:
+        prediction = database.child("predictie").child("tip").get()
+        if prediction == "Dog":
+            print("Dog")
+        else:
+            print("Cat")
     
+        sleep(10)
+
 def cleanup():
     alarm_thread.join()
     send_photo_thread.join()
+    feed_pet_thread.join()
     GPIO.cleanup()
     print("\nDone")
 
@@ -126,6 +137,9 @@ try:
 
     send_photo_thread = threading.Thread(target=upload_capture_to_storage)
     send_photo_thread.start()
+
+    feed_pet_thread = threading.Thread(target=feed_pet)
+    feed_pet_thread.start()
 
     while True:
         try:
