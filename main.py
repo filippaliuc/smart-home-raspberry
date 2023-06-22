@@ -119,10 +119,10 @@ def feed_pet():
         prediction = database.child("predictie").child("tip").get()
         if prediction.val() == "Dog":
             print("Dog")
-	        time.sleep(10)
+            time.sleep(10)
         else:
             print("Cat")
-    	    time.sleep(10)
+            time.sleep(10)
 
 def cleanup():
     alarm_thread.join()
