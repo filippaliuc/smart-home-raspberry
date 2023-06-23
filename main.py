@@ -182,7 +182,7 @@ try:
             print('  Centrală termica: ', temperature_controller["centrala"], ', Aer condiționat: ', temperature_controller["clima"])
             print('  Umidificator: ', humidity_controller["umidificator"], ', Dezumidificator: ', humidity_controller["dezumidificator"])
             print('  Calculează predicția: ', database.child("predictie").child("compute").get().val())
-            print('  Predicție: ', 'Inactiv' if database.child("predictie").child("tip").get().val() else database.child("predictie").child("tip").get().val(), '\n')
+            print('  Predicție: ', 'Inactiv' if not database.child("predictie").child("tip").get().val() else database.child("predictie").child("tip").get().val(), '\n')
 
             binary_string_of_lights = boolean_to_binary(lights=lights)
             control_led_state(binaryValue=binary_string_of_lights)
