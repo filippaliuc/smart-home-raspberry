@@ -151,15 +151,16 @@ def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, 
 
     current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     with open('runLog.txt', 'a') as file:
-        file.write('Time: ', current_time, ':\n')
-        file.write('    Temperatură: {0:0.1f} C Umiditate: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanță ', distance, '\n') 
-        print('    Alarmă: ' , (1 if not is_flame else 0), '\n')
-        print('    Jaluzele: ', blinds, '\n')
-        print('    Lumini: ', lights, '\n')
-        print('    Centrală termica: ', temperature_controller["centrala"], ', Aer condiționat: ', temperature_controller["clima"], '\n')
-        print('    Umidificator: ', humidity_controller["umidificator"], ', Dezumidificator: ', humidity_controller["dezumidificator"], '\n')
-        print('    Calculează predicția: ', database.child("predictie").child("compute").get().val(), '\n')
-        print('    Predicție: ', 'Inactiv' if not database.child("predictie").child("tip").get().val() else database.child("predictie").child("tip").get().val(), '\n\n')
+        file.write('Time: ' + str(current_time) + ':\n')
+        file.write('    Temperatură: {0:0.1f} C Umiditate: {1:0.1f} %'.format(temperature, humidity) + ' Lumina ' + str(is_light) + ' Foc ' + str(is_flame) + ' Distanță ' + str(distance) + '\n')
+        file.write('    Alarmă: ' + str(1 if not is_flame else 0) + '\n')
+        file.write('    Jaluzele: ' + str(blinds) + '\n')
+        file.write('    Lumini: ' + str(lights) + '\n')
+        file.write('    Centrală termica: ' + str(temperature_controller["centrala"]) + ', Aer condiționat: ' + str(temperature_controller["clima"]) + '\n')
+        file.write('    Umidificator: ' + str(humidity_controller["umidificator"]) + ', Dezumidificator: ' + str(humidity_controller["dezumidificator"]) + '\n')
+        file.write('    Calculează predicția: ' + str(database.child("predictie").child("compute").get().val()) + '\n')
+        file.write('    Predicție: ' + ('Inactiv' if not database.child("predictie").child("tip").get().val() else database.child("predictie").child("tip").get().val()) + '\n\n')
+
 
 
 try: 
