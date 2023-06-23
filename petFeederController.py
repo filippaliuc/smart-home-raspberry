@@ -11,7 +11,7 @@ def feed_cat():
     GPIO.setup(INPUT1_PIN, GPIO.OUT)
 
     # Controlul stării pinilor GPIO în funcție de predicție
-    GPIO.output(INPUT1_PIN, GPIO.HIGH)
+    # GPIO.output(INPUT1_PIN, GPIO.HIGH)
 
     while True:
         prediction = database.child("predictie").child("tip").get()
@@ -31,13 +31,12 @@ def feed_dog():
     GPIO.setup(INPUT2_PIN, GPIO.OUT)
     
     # Controlul stării pinilor GPIO în funcție de predicție
-    GPIO.output(INPUT2_PIN, GPIO.HIGH)
+    # GPIO.output(INPUT2_PIN, GPIO.HIGH)
 
     while True:
         prediction = database.child("predictie").child("tip").get()
         if prediction.val() == "Dog":
-            print("Cat")
-
+            print("Dog")
             GPIO.output(INPUT2_PIN, GPIO.LOW)
             sleep(10)
             GPIO.output(INPUT2_PIN, GPIO.HIGH)
