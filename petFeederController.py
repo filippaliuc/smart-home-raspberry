@@ -8,7 +8,7 @@ def feed_cat():
 
     # Configurarea modului GPIO și a pinilor
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(INPUT1_PIN, GPIO.OUT)
+    GPIO.setup(INPUT1_PIN, GPIO.OUT, intial=GPIO.HIGH)
 
     # Controlul stării pinilor GPIO în funcție de predicție
 
@@ -27,7 +27,7 @@ def feed_dog():
 
     # Configurarea modului GPIO și a pinilor
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(INPUT2_PIN, GPIO.OUT)
+    GPIO.setup(INPUT2_PIN, GPIO.OUT, intial=GPIO.HIGH)
     
     # Controlul stării pinilor GPIO în funcție de predicție
 
