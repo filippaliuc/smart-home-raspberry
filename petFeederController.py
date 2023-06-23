@@ -12,6 +12,7 @@ def feed_cat():
 
     # Controlul stării pinilor GPIO în funcție de predicție
     # GPIO.output(INPUT1_PIN, GPIO.HIGH)
+    GPIO.output(INPUT1_PIN, GPIO.LOW)
 
     while True:
         prediction = database.child("predictie").child("tip").get()
