@@ -147,7 +147,7 @@ def cleanup():
     # Eliberăm resursele GPIO
     GPIO.cleanup()
 
-def write_log(write_file, temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller):
+def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller):
 
     current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     with open('runLog.txt', 'a') as file:
@@ -186,6 +186,8 @@ try:
             write_to_cloud(temperature, humidity, is_light, is_flame)
 
             alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
+
+            write_file(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller)
 
             binary_string_of_lights = boolean_to_binary(lights=lights)
             control_led_state(binaryValue=binary_string_of_lights)
