@@ -147,6 +147,21 @@ def cleanup():
     # Eliberăm resursele GPIO
     GPIO.cleanup()
 
+def write_log(write_file, temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller):
+
+    current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    with open('runLog.txt', 'a') as file:
+        file.write('Time: ', current_time, ':\n')
+        file.write('    Temperatură: {0:0.1f} C Umiditate: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanță ', distance, '\n') 
+        print('    Alarmă: ' , (1 if not is_flame else 0), '\n')
+        print('    Jaluzele: ', blinds, '\n')
+        print('    Lumini: ', lights, '\n')
+        print('    Centrală termica: ', temperature_controller["centrala"], ', Aer condiționat: ', temperature_controller["clima"], '\n')
+        print('    Umidificator: ', humidity_controller["umidificator"], ', Dezumidificator: ', humidity_controller["dezumidificator"], '\n')
+        print('    Calculează predicția: ', database.child("predictie").child("compute").get().val(), '\n')
+        print('    Predicție: ', 'Inactiv' if not database.child("predictie").child("tip").get().val() else database.child("predictie").child("tip").get().val(), '\n\n')
+
+
 try: 
     alarm_thread = threading.Thread(target=trigger_fire_alarm)
     alarm_thread.start()
@@ -167,22 +182,10 @@ try:
             distance = get_distance()
             is_flame = get_flame()
 
-            current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-            print('Time: ', current_time, ':\n')
-            print('  Temperatură: {0:0.1f} C Umiditate: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanță ', distance) 
-
             write_to_database(temperature, humidity, is_light, distance, is_flame)
             write_to_cloud(temperature, humidity, is_light, is_flame)
 
             alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
-
-            print('  Alarmă: ' , (1 if not is_flame else 0))
-            print('  Jaluzele: ', blinds)
-            print('  Lumini: ', lights)
-            print('  Centrală termica: ', temperature_controller["centrala"], ', Aer condiționat: ', temperature_controller["clima"])
-            print('  Umidificator: ', humidity_controller["umidificator"], ', Dezumidificator: ', humidity_controller["dezumidificator"])
-            print('  Calculează predicția: ', database.child("predictie").child("compute").get().val())
-            print('  Predicție: ', 'Inactiv' if not database.child("predictie").child("tip").get().val() else database.child("predictie").child("tip").get().val(), '\n')
 
             binary_string_of_lights = boolean_to_binary(lights=lights)
             control_led_state(binaryValue=binary_string_of_lights)
