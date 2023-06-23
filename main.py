@@ -141,24 +141,24 @@ def cleanup():
     # Așteptăm încheierea firelor de execuție pentru alarmă, încărcare imagine și hrănirea animalelor de companie
     alarm_thread.join()
     send_photo_thread.join()
-    # feed_cat_thread.join()
-    # feed_dog_thread.join()
+    feed_cat_thread.join()
+    feed_dog_thread.join()
 
     # Eliberăm resursele GPIO
     GPIO.cleanup()
 
 try: 
-    # alarm_thread = threading.Thread(target=trigger_fire_alarm)
-    # alarm_thread.start()
+    alarm_thread = threading.Thread(target=trigger_fire_alarm)
+    alarm_thread.start()
 
-    # send_photo_thread = threading.Thread(target=upload_capture_to_storage)
-    # send_photo_thread.start()
+    send_photo_thread = threading.Thread(target=upload_capture_to_storage)
+    send_photo_thread.start()
 
-    # feed_dog_thread = threading.Thread(target=feed_dog)
-    # feed_dog_thread.start()
+    feed_dog_thread = threading.Thread(target=feed_dog)
+    feed_dog_thread.start()
 
-    # feed_cat_thread = threading.Thread(target=feed_cat)
-    # feed_cat_thread.start()
+    feed_cat_thread = threading.Thread(target=feed_cat)
+    feed_cat_thread.start()
 
     while True:
         try:
@@ -167,19 +167,29 @@ try:
             distance = get_distance()
             is_flame = get_flame()
 
-            print('Temp: {0:0.1f} C Humidity: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanta ', distance)
+            current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            print('Time: ', current_time, ':\n')
+            print('Temperatură: {0:0.1f} C Umiditate: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanță ', distance, '\n') 
 
-            # write_to_database(temperature, humidity, is_light, distance, is_flame)
+            write_to_database(temperature, humidity, is_light, distance, is_flame)
             write_to_cloud(temperature, humidity, is_light, is_flame)
 
-            # alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
+            alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
 
-            # binary_string_of_lights = boolean_to_binary(lights=lights)
-            # control_led_state(binaryValue=binary_string_of_lights)
+            print('  Alarmă: ' , (1 if not is_flame else 0), '\n')
+            print('  Jaluzele: ', blinds, '\n')
+            print('  Lumini: ', lights '\n')
+            print('  Centrală termica: ', temperature_controller["centrala"], ', Aer condiționat: ', temperature_controller["clima"])
+            print('  Umidificator: ', humidity_controller["umidificator"], ', Dezumidificator: ', humidity_controller["dezumidificator"])
+            print('  Calculează predicția: ', database.child("predictie").child("compute").get() )
+            print('  Predicție: ', database.child("predictie").child("tip").get())
 
-            # control_air_conditioner(temperature=temperature_controller)
+            binary_string_of_lights = boolean_to_binary(lights=lights)
+            control_led_state(binaryValue=binary_string_of_lights)
 
-            # control_humidity(humidity=humidity_controller)
+            control_air_conditioner(temperature=temperature_controller)
+
+            control_humidity(humidity=humidity_controller)
 
 
             time.sleep(0.0005)
