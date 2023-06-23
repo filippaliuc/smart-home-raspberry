@@ -19,7 +19,7 @@ def feed_cat():
             print("Cat")
             sleep(10)
             GPIO.output(INPUT1_PIN, GPIO.HIGH)
-        sleep(30 * 60)
+            sleep(30 * 60)
 
 def feed_dog():
     # Definirea pinilor GPIO pentru umidificator și dezumidificator
@@ -38,5 +38,5 @@ def feed_dog():
             GPIO.output(INPUT2_PIN, GPIO.LOW)
             sleep(10)
             GPIO.output(INPUT2_PIN, GPIO.HIGH)
-        sleep(30 * 60)
+            sleep(30 * 60)
 
