@@ -6,7 +6,7 @@ from leds import control_led_state
 from humidityController import control_humidity
 from temperatureController import control_air_conditioner
 from buzzer import trigger_fire_alarm
-# from petFeederController import feed_cat, feed_dog
+from petFeederController import feed_cat, feed_dog
 
 from firebase import database, storage
 from cloudwatchService import cloudwatch
@@ -169,20 +169,20 @@ try:
 
             current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print('Time: ', current_time, ':\n')
-            print('Temperatură: {0:0.1f} C Umiditate: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanță ', distance, '\n') 
+            print('  Temperatură: {0:0.1f} C Umiditate: {1:0.1f} %'.format(temperature,humidity),'Lumina ', is_light, ' Foc ', is_flame, ' Distanță ', distance) 
 
             write_to_database(temperature, humidity, is_light, distance, is_flame)
             write_to_cloud(temperature, humidity, is_light, is_flame)
 
             alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
 
-            print('  Alarmă: ' , (1 if not is_flame else 0), '\n')
-            print('  Jaluzele: ', blinds, '\n')
-            print('  Lumini: ', lights '\n')
+            print('  Alarmă: ' , (1 if not is_flame else 0))
+            print('  Jaluzele: ', blinds)
+            print('  Lumini: ', lights)
             print('  Centrală termica: ', temperature_controller["centrala"], ', Aer condiționat: ', temperature_controller["clima"])
             print('  Umidificator: ', humidity_controller["umidificator"], ', Dezumidificator: ', humidity_controller["dezumidificator"])
-            print('  Calculează predicția: ', database.child("predictie").child("compute").get() )
-            print('  Predicție: ', database.child("predictie").child("tip").get())
+            print('  Calculează predicția: ', database.child("predictie").child("compute").get().val())
+            print('  Predicție: ', 'Inactiv' if database.child("predictie").child("tip").get().val() else database.child("predictie").child("tip").get().val(), '\n')
 
             binary_string_of_lights = boolean_to_binary(lights=lights)
             control_led_state(binaryValue=binary_string_of_lights)
