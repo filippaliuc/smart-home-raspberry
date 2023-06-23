@@ -187,7 +187,7 @@ try:
 
             alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
 
-            write_file(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller)
+            write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller)
 
             binary_string_of_lights = boolean_to_binary(lights=lights)
             control_led_state(binaryValue=binary_string_of_lights)
