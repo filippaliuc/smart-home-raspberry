@@ -181,6 +181,7 @@ try:
             temperature, humidity = get_temperature_and_humidity()
             is_light = get_light_state()
             distance = get_distance()
+            print(distance)
             is_flame = get_flame()
 
             write_to_database(temperature, humidity, is_light, distance, is_flame)
@@ -196,9 +197,6 @@ try:
             control_air_conditioner(temperature=temperature_controller)
 
             control_humidity(humidity=humidity_controller)
-
-
-            time.sleep(0.0005)
 
         except KeyboardInterrupt:
             break
