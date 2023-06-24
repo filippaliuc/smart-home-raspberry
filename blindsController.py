@@ -1,5 +1,5 @@
 from time import sleep 
-from RPi.GPIO import GPIO
+import RPi.GPIO as GPIO
 
 PWM_PIN=21
 CLOCKWISE_PIN=23
