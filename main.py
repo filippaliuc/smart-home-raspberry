@@ -216,7 +216,7 @@ try:
 
             # Controlează umiditatea în funcție de umiditatea setată
             control_humidity(humidity=humidity_controller)
-            print(temperature_controller, humidity_controller)  
+            
         except KeyboardInterrupt:
             break  
 

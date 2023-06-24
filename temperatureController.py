@@ -2,13 +2,11 @@ import RPi.GPIO as GPIO
 import time
 
 def control_air_conditioner(state):
-    # Definirea pinului GPIO pentru controlul aerului condiționat
+    
+    # Definirea pinului GPIO pentru controlul aerului conditionat
     INPUT_PIN = 32
-    # Configurarea modului GPIO și a pinului pentru controlul aerului condiționat
+
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(INPUT_PIN, GPIO.OUT)
-    
-    GPIO.output(INPUT_PIN, state)
-    # GPIO.cleanup()
 
-control_air_conditioner(1)
+    GPIO.output(INPUT_PIN, state)
