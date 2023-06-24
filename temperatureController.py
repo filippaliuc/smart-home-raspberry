@@ -3,11 +3,10 @@ import time
 
     
     # Definirea pinului GPIO pentru controlul aerului conditionat
-INPUT_PIN = 32
+INPUT_PIN = 3
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(INPUT_PIN, GPIO.OUT)
-
 
 try:
     while True: 
