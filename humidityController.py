@@ -12,5 +12,16 @@ def control_humidity(humidity):
     GPIO.setup(INPUT2_PIN, GPIO.OUT)
     
     # Controlul stării pinilor GPIO în funcție de valorile umidificatorului și dezumidificatorului
-    GPIO.output(INPUT1_PIN, humidity["umidificator"])
-    GPIO.output(INPUT2_PIN, humidity["dezumidificator"])
+    GPIO.output(INPUT1_PIN, humidity[0])
+    GPIO.output(INPUT2_PIN, humidity[1])
+    GPIO.cleanup()
+
+
+try:
+    while True:
+        control_humidity([0,1])
+        sleep(2)
+        control_humidity([1,0])
+
+except KeyboardInterrupt
+    GPIO.cleanup()
