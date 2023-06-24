@@ -91,8 +91,8 @@
 # run()
 
 
-# import RPi.GPIO as GPIO
-# import time
+import RPi.GPIO as GPIO
+import time
 
 def run():
     # Definirea pinului GPIO pentru controlul aerului condiționat
