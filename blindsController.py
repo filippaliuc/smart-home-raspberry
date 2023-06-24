@@ -105,7 +105,7 @@ def run():
     # Controlul stării pinului GPIO în funcție de valoarea temperaturii
     GPIO.output(INPUT_PIN, True)
     time.sleep(3)
-    GPIO.output(INPUT_PIN, Flase)
+    GPIO.output(INPUT_PIN, False)
 
 
 
