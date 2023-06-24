@@ -212,7 +212,7 @@ try:
             control_led_state(binaryValue=binary_string_of_lights) 
             
             # Controlează aerul condiționat în funcție de temperatura setată
-            control_air_conditioner(temperature=temperature_controller)  
+            control_air_conditioner(temperature=temperature_controller["clima"])  
 
             # Controlează umiditatea în funcție de umiditatea setată
             control_humidity(humidity=humidity_controller)
