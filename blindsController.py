@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-ENABLE_PIN = 21
+ENABLE_PIN = 23
 CLOCKWISE_PIN = 19
-ANTI_CLOCKWISE_PIN = 23
+ANTI_CLOCKWISE_PIN = 21
 
 def setup_gpio():
     GPIO.setmode(GPIO.BOARD)
@@ -33,3 +33,4 @@ def run():
         GPIO.cleanup()
 
 run()
+
