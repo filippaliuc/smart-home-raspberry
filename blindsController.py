@@ -1,4 +1,3 @@
-from machine import Pin, PWM
 from time import sleep 
 from RPi.GPIO import GPIO
 
