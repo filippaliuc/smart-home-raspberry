@@ -31,7 +31,7 @@ def loop():
 def destroy():	
 	GPIO.cleanup()
 
-if __name__ == '__main__':     # Program start from here
+if __name__ == '__main__':
 	setup()
 	try:
         loop()
