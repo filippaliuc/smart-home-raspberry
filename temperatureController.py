@@ -10,4 +10,5 @@ def control_air_conditioner(temperature):
     GPIO.setup(INPUT_PIN, GPIO.OUT)
 
     # Controlul stării pinului GPIO în funcție de valoarea temperaturii
+
     GPIO.output(INPUT_PIN, temperature["clima"])

@@ -158,3 +158,1776 @@ Time: 2023-06-23 12:21:38:
     Calculează predicția: 0
     Predicție: Inactiv
 
+<<<<<<< HEAD
+=======
+Time: 2023-06-23 12:31:54:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.03
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': True, 'bucatarie': True, 'dormitor': True, 'lampa': True, 'stingeTot': False}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:31:58:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.04
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': True, 'dormitor': False, 'lampa': True, 'stingeTot': False}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:01:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.02
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:05:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.02
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:08:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.05
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:11:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.03
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': True, 'stingeTot': False}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:15:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.01
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': True, 'dormitor': False, 'lampa': True, 'stingeTot': False}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:18:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.03
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:22:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.04
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:25:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.0
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:28:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.06
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 0, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:32:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.02
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 0, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:36:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.06
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 0, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:39:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.01
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 0, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:42:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.02
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 0, Dezumidificator: 0
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:46:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.04
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:49:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.05
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 0
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:54:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.01
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 0, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:32:57:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 3.98
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:00:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.41
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:04:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 3.79
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:07:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.04
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:12:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.0
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:16:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 4.03
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:20:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 0 Foc 1 Distanță 4.03
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:23:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 0 Foc 1 Distanță 33.86
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:26:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 29.5
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:30:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 15.14
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:33:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 35.68
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:39:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 33.61
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:43:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:46:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:51:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:33:57:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.69
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:00:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.63
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:03:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:07:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.69
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:10:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 34.68
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:13:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 34.67
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:17:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.67
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:20:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:24:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:27:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.67
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:31:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:34:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 0, Dezumidificator: 0
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:37:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 0, Dezumidificator: 0
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:41:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.68
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:44:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.63
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:49:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:52:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:55:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.62
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:34:59:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:02:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:06:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.67
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:09:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.63
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:13:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:16:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.62
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:20:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.67
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:23:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.62
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:26:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.6
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:30:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.68
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:33:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.61
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:37:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.66
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:40:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:43:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:46:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:50:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.68
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:53:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.69
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:35:57:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:00:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:04:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.62
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:07:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:10:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.63
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:15:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 33.58
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:18:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:22:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:25:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.67
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:29:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.67
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:33:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.65
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:36:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 34.64
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:36:40:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 33.88
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:42:55:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 4.23
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:42:58:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 8.55
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:02:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 42.88
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:05:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 65.66
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:09:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 44.23
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:12:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 19.07
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:16:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 16.78
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:20:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 17.44
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:23:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 16.83
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:26:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 50.31
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:30:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 66.13
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:34:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 44.68
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:37:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 44.67
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:41:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 44.68
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:44:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 44.22
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:48:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 143.85
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:52:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 44.67
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:56:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 0 Foc 1 Distanță 50.29
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:43:59:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 0 Foc 1 Distanță 44.26
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:02:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 0 Foc 1 Distanță 42.87
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:06:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 0 Foc 1 Distanță 44.85
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:10:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 0 Foc 1 Distanță 44.27
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:14:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 44.25
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:17:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 44.25
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:21:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 44.27
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:24:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 44.29
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:28:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 44.62
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:31:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 44.23
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:35:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 44.25
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:38:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 49.45
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:41:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 15.14
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:46:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 44.25
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:51:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 18.12
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:54:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 18.71
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:44:58:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 42.86
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:01:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 42.84
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:05:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 18.99
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:08:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 42.82
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:12:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 62.9
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:15:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 0 Foc 1 Distanță 62.9
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:19:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 0 Foc 1 Distanță 66.13
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:22:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 42.84
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:27:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 42.87
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:31:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 49.35
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:37:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 44.26
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:40:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 44.23
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:44:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 44.26
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:47:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 44.27
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:51:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 44.28
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:54:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 42.91
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:45:58:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 42.82
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:46:01:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 42.85
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:46:05:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 44.68
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:46:08:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 43.85
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:46:11:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 44.2
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:46:15:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 14.11
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:46:18:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 18.71
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:46:22:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 18.72
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:47:44:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 1 Foc 1 Distanță 17.75
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:47:48:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 1 Foc 1 Distanță 17.79
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:47:52:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 1 Foc 1 Distanță 17.77
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:47:56:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 17.74
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:47:59:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 17.75
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:03:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 17.76
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:06:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 1 Foc 1 Distanță 17.73
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:10:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 17.73
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:16:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 17.79
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:19:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 17.79
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:23:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 10.3
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:26:
+    Temperatură: 26.0 C Umiditate: 77.0 % Lumina 1 Foc 1 Distanță 16.49
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:30:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 14.81
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:34:
+    Temperatură: 26.0 C Umiditate: 79.0 % Lumina 1 Foc 1 Distanță 16.14
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:37:
+    Temperatură: 26.0 C Umiditate: 78.0 % Lumina 1 Foc 1 Distanță 10.27
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:40:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 16.17
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:46:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 16.14
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:50:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 16.19
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:53:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 16.18
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:48:56:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 16.21
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:49:01:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 16.14
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:01:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 14.46
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:04:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 14.48
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:08:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 14.5
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:11:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 14.46
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:15:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 14.43
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:18:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 14.46
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:22:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 14.81
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:25:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 14.5
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:29:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 1 Foc 1 Distanță 14.5
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:32:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 16.17
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Cat
+
+Time: 2023-06-23 12:53:36:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 17.13
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Cat
+
+Time: 2023-06-23 12:53:39:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 17.12
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Dog
+
+Time: 2023-06-23 12:53:43:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 14.47
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Dog
+
+Time: 2023-06-23 12:53:46:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 14.45
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 1
+    Predicție: Dog
+
+Time: 2023-06-23 12:53:49:
+    Temperatură: 26.0 C Umiditate: 76.0 % Lumina 0 Foc 1 Distanță 14.46
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:53:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 14.43
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+Time: 2023-06-23 12:53:56:
+    Temperatură: 26.0 C Umiditate: 75.0 % Lumina 0 Foc 1 Distanță 14.45
+    Alarmă: 0
+    Jaluzele: 0
+    Lumini: {'baie': False, 'bucatarie': False, 'dormitor': False, 'lampa': False, 'stingeTot': True}
+    Centrală termica: 1, Aer condiționat: 1
+    Umidificator: 1, Dezumidificator: 1
+    Calculează predicția: 0
+    Predicție: Inactiv
+
+>>>>>>> 7eac7d2118293555ff53a99f27dae7297a3d2d1f
