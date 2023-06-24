@@ -31,9 +31,10 @@ def loop():
 def destroy():	
 	GPIO.cleanup()
 
-if __name__ == '__main__':
+if __name__ == '__main__':     # Program start from here
 	setup()
 	try:
         loop()
   	except KeyboardInterrupt:
-	    destroy()
+		destroy()
+ 
