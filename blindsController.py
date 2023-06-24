@@ -47,10 +47,10 @@ motorSpeedForward = 1
 def run():
     motorSwitch.on()
     sleep(2)
-    motor.forward(speed=1)
+    motor.forward(speed=0.9)
     sleep(5)
-    motor.backward(speed=1)
+    motor.backward(speed=0.9)
     sleep(5)
-    # motorSwitch.off()
+    motorSwitch.off()
 
 run()
