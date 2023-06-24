@@ -106,4 +106,5 @@ def control_air_conditioner(temperature):
     GPIO.output(INPUT_PIN, 1)
 
 control_air_conditioner(1)
+sleep(10)
 GPIO.cleanup()
