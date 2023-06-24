@@ -42,9 +42,6 @@ ANTI_CLOCKWISE_PIN=11
 motor = Motor(CLOCKWISE_PIN, ANTI_CLOCKWISE_PIN)
 motorSwitch = LED(ENABLE_PIN)
 
-app = App(title="GUI Development", layout="grid", height=600, width=800)
-message = Text(app, text="Single Motor Control Interface", grid=[4,0])
-
 motorSpeedForward = 0.5
 motorSpeedBackward = 0.5
 
