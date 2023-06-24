@@ -33,7 +33,6 @@
 # blinds_controller(1)
 
 from time import sleep
-from guizero import App, Text, PushButton
 from gpiozero import Motor, LED
 
 ENABLE_PIN=9
@@ -57,5 +56,5 @@ def run():
     motor.backward(speed=motorSpeedBackward)
     sleep(5)
     motorSwitch.off()
-    
+
 run()
