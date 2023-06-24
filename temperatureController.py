@@ -14,3 +14,5 @@ def control_air_conditioner(temperature):
     GPIO.output(INPUT_PIN, 0)
     print("test")
 
+control_air_conditioner(1)
+
