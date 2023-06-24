@@ -87,3 +87,5 @@ def run():
     pwm.stop()
 
     GPIO.cleanup()
+
+run()
