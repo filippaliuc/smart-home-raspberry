@@ -94,21 +94,21 @@
 # import RPi.GPIO as GPIO
 # import time
 
-# def control_air_conditioner(temperature):
-#     # Definirea pinului GPIO pentru controlul aerului condiționat
-#     INPUT_PIN = 32
+def run():
+    # Definirea pinului GPIO pentru controlul aerului condiționat
+    INPUT_PIN = 32
 
-#     # Configurarea modului GPIO și a pinului pentru controlul aerului condiționat
-#     GPIO.setmode(GPIO.BOARD)
-#     GPIO.setup(INPUT_PIN, GPIO.OUT)
+    # Configurarea modului GPIO și a pinului pentru controlul aerului condiționat
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(INPUT_PIN, GPIO.OUT)
 
-#     # Controlul stării pinului GPIO în funcție de valoarea temperaturii
-#     GPIO.output(INPUT_PIN, 1)
-#     time.sleep(5)
-#     GPIO.output(INPUT_PIN, 0)
+    # Controlul stării pinului GPIO în funcție de valoarea temperaturii
+    GPIO.output(INPUT_PIN, 1)
+    time.sleep(5)
+    GPIO.output(INPUT_PIN, 0)
 
-#     GPIO.cleanup()
+    GPIO.cleanup()
 
 
-# control_air_conditioner(1)
+# run()
 # time.sleep(10)

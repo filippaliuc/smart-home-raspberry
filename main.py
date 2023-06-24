@@ -148,8 +148,11 @@ def cleanup():
     GPIO.cleanup()
 
 def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller):
-
+ 
+    # Scrie valorile colectate de la senzori cât și starea variabilelor controlerelor
     current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+
+    # Deschide fisierul runLog.txt cu opțiunea append, adică adăugare începând de la finalul fișierului
     with open('runLog.txt', 'a') as file:
         file.write('Time: ' + str(current_time) + ':\n')
         file.write('    Temperatură: {0:0.1f} C Umiditate: {1:0.1f} %'.format(temperature, humidity) + ' Lumina ' + str(is_light) + ' Foc ' + str(is_flame) + ' Distanță ' + str(distance) + '\n')
@@ -164,45 +167,59 @@ def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, 
 
 
 try: 
+
+    # Începe firul de execuiție al alarmei
     alarm_thread = threading.Thread(target=trigger_fire_alarm)
     alarm_thread.start()
 
+    # Începe firul de execuție al capturii încărcate în Firebase Storage
     send_photo_thread = threading.Thread(target=upload_capture_to_storage)
     send_photo_thread.start()
 
+    # Începe firul de execuție al hrănitorului câinelui
     feed_dog_thread = threading.Thread(target=feed_dog)
     feed_dog_thread.start()
 
+    # Începe firul de execuție al hrănitorului pisicii
     feed_cat_thread = threading.Thread(target=feed_cat)
     feed_cat_thread.start()
 
     while True:
         try:
+            # Obținerea informațiilor de la senzori
             temperature, humidity = get_temperature_and_humidity()
-            is_light = get_light_state()
-            distance = get_distance()
-            print(distance)
+            is_light = get_light_state()  
+            distance = get_distance()  
+            print(distance) 
             is_flame = get_flame()
 
-            write_to_database(temperature, humidity, is_light, distance, is_flame)
-            write_to_cloud(temperature, humidity, is_light, is_flame)
+            # Scrie în baza de date informațiile colectate de la senzori
+            write_to_database(temperature, humidity, is_light, distance, is_flame)  
 
-            alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()
+             # Scrie în Cloudwatch informațiile colectate de la senzori
+            write_to_cloud(temperature, humidity, is_light, is_flame) 
 
-            write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller)
+            # Citește din baza de date valorile variabilelor de stare ale controlerelor diferitelor dispozitive
+            alarm, blinds, lights, temperature_controller, humidity_controller = read_from_database()  
 
-            binary_string_of_lights = boolean_to_binary(lights=lights)
-            control_led_state(binaryValue=binary_string_of_lights)
+            # Scrie în log atât datele colectate de la senzori, cât și valorile variabilelor de stare ale controlerelor citite anterior
+            write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller) 
 
-            control_air_conditioner(temperature=temperature_controller)
+            # Transformă starea luminilor într-un șir binar
+            binary_string_of_lights = boolean_to_binary(lights=lights)  
 
-            control_humidity(humidity=humidity_controller)
+            # Controlează starea LED-urilor pe baza valorii binare
+            control_led_state(binaryValue=binary_string_of_lights) 
+            
+            # Controlează aerul condiționat în funcție de temperatura setată
+            control_air_conditioner(temperature=temperature_controller)  
 
+            # Controlează umiditatea în funcție de umiditatea setată
+            control_humidity(humidity=humidity_controller)  
         except KeyboardInterrupt:
-            break
-
-
+            break  
 
 except KeyboardInterrupt:
-    cleanup()
+    cleanup()  # Încheierea curățării resurselor în cazul în care se apasă combinația de taste pentru întrerupere
+
 
