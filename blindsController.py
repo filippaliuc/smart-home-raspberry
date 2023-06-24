@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-ENABLE_PIN = 23
-CLOCKWISE_PIN = 21
-ANTI_CLOCKWISE_PIN = 19
+ENABLE_PIN = 21
+CLOCKWISE_PIN = 19
+ANTI_CLOCKWISE_PIN = 23
 
 def setup_gpio():
     GPIO.setmode(GPIO.BOARD)
@@ -25,11 +25,14 @@ def run():
 
         GPIO.output(ENABLE_PIN, GPIO.HIGH)
 
-        sleep(4)
+        while True:
+            sleep(2)
 
-    finally:
+    except KeyboardInterrupt:
         GPIO.output(ENABLE_PIN, GPIO.LOW)
         pwm.stop()
+
+    finally:
         GPIO.cleanup()
 
 run()
