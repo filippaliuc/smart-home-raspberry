@@ -107,6 +107,6 @@ def run():
     time.sleep(3)
     GPIO.output(INPUT_PIN, False)
 
-
+    GPIO.cleanup()
 
 run()
