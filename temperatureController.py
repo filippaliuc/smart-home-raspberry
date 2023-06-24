@@ -12,6 +12,8 @@ def control_air_conditioner(temperature):
     # Controlul stării pinului GPIO în funcție de valoarea temperaturii
     print(temperature["clima"])
     if temperature["clima"]:
+        print("Ceva")
         GPIO.output(INPUT_PIN, GPIO.HIGH)
     else: 
+        print("Ceva2312d12dsd")
         GPIO.output(INPUT_PIN, GPIO.LOW)
