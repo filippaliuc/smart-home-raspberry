@@ -11,8 +11,10 @@ GPIO.setup(INPUT_PIN, GPIO.OUT)
 try:
     while True: 
         GPIO.output(INPUT_PIN, 0)
+        print("Ceva")
         time.sleep(2)
         GPIO.output(INPUT_PIN, 1)
+        print("Altevas")
         time.sleep(2)
 except KeyboardInterrupt:
     GPIO.cleanup()
