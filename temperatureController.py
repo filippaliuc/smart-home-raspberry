@@ -13,5 +13,6 @@ try:
         GPIO.output(INPUT_PIN, 0)
         time.sleep(2)
         GPIO.output(INPUT_PIN, 1)
+        time.sleep(2)
 except KeyboardInterrupt:
     GPIO.cleanup()
