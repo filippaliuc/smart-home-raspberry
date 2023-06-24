@@ -45,7 +45,6 @@ motorSwitch = LED(ENABLE_PIN)
 motorSpeedForward = 1
 
 def run():
-    sleep(2)
     motorSwitch.on()
     sleep(2)
     motor.forward(speed=1)
