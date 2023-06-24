@@ -4,7 +4,7 @@ import time
 def control_air_conditioner(state):
     
     # Definirea pinului GPIO pentru controlul aerului conditionat
-    INPUT_PIN = 3
+    INPUT_PIN = 32
 
     # Configurarea modului GPIO și a pinilor
     GPIO.setmode(GPIO.BOARD)
