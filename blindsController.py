@@ -105,6 +105,6 @@ def control_air_conditioner(temperature):
     # Controlul stării pinului GPIO în funcție de valoarea temperaturii
     GPIO.output(INPUT_PIN, 1)
 
-control_air_conditioner(1)
-sleep(10)
-GPIO.cleanup()
+# control_air_conditioner(1)
+# sleep(10)
+# GPIO.cleanup()
