@@ -14,23 +14,20 @@ def setup_gpio():
 def run():
     setup_gpio()
 
-    pwm = GPIO.PWM(ENABLE_PIN, 100)
-
     try:
-        pwm.start(0)
-        GPIO.output(CLOCKWISE_PIN, GPIO.HIGH)
-        GPIO.output(ANTI_CLOCKWISE_PIN, GPIO.LOW)
-
-        pwm.ChangeDutyCycle(50)
-
         GPIO.output(ENABLE_PIN, GPIO.HIGH)
 
         while True:
+            GPIO.output(CLOCKWISE_PIN, GPIO.HIGH)
+            GPIO.output(ANTI_CLOCKWISE_PIN, GPIO.LOW)
+            sleep(2)
+
+            GPIO.output(CLOCKWISE_PIN, GPIO.LOW)
+            GPIO.output(ANTI_CLOCKWISE_PIN, GPIO.HIGH)
             sleep(2)
 
     except KeyboardInterrupt:
         GPIO.output(ENABLE_PIN, GPIO.LOW)
-        pwm.stop()
 
     finally:
         GPIO.cleanup()
