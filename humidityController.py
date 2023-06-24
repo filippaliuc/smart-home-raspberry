@@ -25,6 +25,8 @@ try:
         print([0, 1][0])
         sleep(2)
         control_humidity([1, 0], INPUT1_PIN, INPUT2_PIN)
+        print([1, 0][0])
+        sleep(2)
 
 except KeyboardInterrupt:
     GPIO.cleanup()
