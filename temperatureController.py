@@ -9,7 +9,10 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(INPUT_PIN, GPIO.OUT)
 
 
-while True: 
-    GPIO.output(INPUT_PIN, 0)
-    time.sleep(2)
-    GPIO.output(INPUT_PIN, 1)
+try:
+    while True: 
+        GPIO.output(INPUT_PIN, 0)
+        time.sleep(2)
+        GPIO.output(INPUT_PIN, 1)
+except KeyboardInterrupt:
+    GPIO.cleanup()
