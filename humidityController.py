@@ -20,8 +20,9 @@ def control_humidity(humidity):
 try:
     while True:
         control_humidity([0,1])
+        print([0,1][0])
         sleep(2)
         control_humidity([1,0])
 
-except KeyboardInterrupt
+except KeyboardInterrupt:
     GPIO.cleanup()
