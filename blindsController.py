@@ -55,37 +55,52 @@
 
 # run()
 
+# import RPi.GPIO as GPIO
+# from time import sleep
+
+# GPIO.setmode(GPIO.BOARD)
+
+# ENABLE_PIN=21
+# CLOCKWISE_PIN=19
+# ANTI_CLOCKWISE_PIN=23
+
+# GPIO.setup(CLOCKWISE_PIN, GPIO.OUT)
+# GPIO.setup(ANTI_CLOCKWISE_PIN, GPIO.OUT)
+# GPIO.setup(ENABLE_PIN, GPIO.OUT)
+
+
+# def run():
+#     pwm=GPIO.PWM(ENABLE_PIN, 100)
+
+#     pwm.start(0)
+#     GPIO.output(CLOCKWISE_PIN, GPIO.HIGH)
+#     GPIO.output(ANTI_CLOCKWISE_PIN, GPIO.LOW)
+
+#     pwm.ChangeDutyCycle(50)
+
+#     GPIO.output(ENABLE_PIN, GPIO.HIGH)
+
+#     sleep(2)
+
+#     GPIO.output(ENABLE_PIN, GPIO.LOW)
+
+#     pwm.stop()
+
+#     GPIO.cleanup()
+
+# run()
+
+
 import RPi.GPIO as GPIO
-from time import sleep
+import time
 
-GPIO.setmode(GPIO.BOARD)
+def control_air_conditioner(temperature):
+    # Definirea pinului GPIO pentru controlul aerului condiționat
+    INPUT_PIN = 32
 
-ENABLE_PIN=21
-CLOCKWISE_PIN=19
-ANTI_CLOCKWISE_PIN=23
+    # Configurarea modului GPIO și a pinului pentru controlul aerului condiționat
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(INPUT_PIN, GPIO.OUT)
 
-GPIO.setup(CLOCKWISE_PIN, GPIO.OUT)
-GPIO.setup(ANTI_CLOCKWISE_PIN, GPIO.OUT)
-GPIO.setup(ENABLE_PIN, GPIO.OUT)
-
-
-def run():
-    pwm=GPIO.PWM(ENABLE_PIN, 100)
-
-    pwm.start(0)
-    GPIO.output(CLOCKWISE_PIN, GPIO.HIGH)
-    GPIO.output(ANTI_CLOCKWISE_PIN, GPIO.LOW)
-
-    pwm.ChangeDutyCycle(50)
-
-    GPIO.output(ENABLE_PIN, GPIO.HIGH)
-
-    sleep(2)
-
-    GPIO.output(ENABLE_PIN, GPIO.LOW)
-
-    pwm.stop()
-
-    GPIO.cleanup()
-
-run()
+    # Controlul stării pinului GPIO în funcție de valoarea temperaturii
+    GPIO.output(INPUT_PIN, 1)
