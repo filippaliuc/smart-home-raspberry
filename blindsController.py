@@ -2,12 +2,12 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 # Pins for Motor Driver Inputs 
-Motor1A = 24
-Motor1B = 23
-Motor1E = 25
+Motor1A = 19
+Motor1B = 21
+Motor1E = 23
 
 def setup():
-    GPIO.setmode(GPIO.BCM)              # GPIO Numbering
+    GPIO.setmode(GPIO.BOARD)            # GPIO Numbering
     GPIO.setup(Motor1A, GPIO.OUT)       # All pins as Outputs
     GPIO.setup(Motor1B, GPIO.OUT)
     GPIO.setup(Motor1E, GPIO.OUT)
