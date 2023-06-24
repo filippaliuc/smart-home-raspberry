@@ -1,7 +1,7 @@
 from time import sleep 
 import RPi.GPIO as GPIO
 
-PWM_PIN=21
+ENABLE_PIN=21
 CLOCKWISE_PIN=23
 ANTI_CLOCKWISE_PIN=19
 
@@ -11,7 +11,7 @@ def blinds_controller(value):
 
     GPIO.setup(CLOCKWISE_PIN, GPIO.OUT)
     GPIO.setup(ANTI_CLOCKWISE_PIN, GPIO.OUT)
-    GPIO.setup(PWM_PIN, GPIO.OUT)
+    GPIO.setup(ENABLE_PIN, GPIO.OUT)
 
     pwm = GPIO.PWM(ENABLE_PIN, 100)  # 100 Hz frequency
     pwm.start(25)
