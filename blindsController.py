@@ -103,12 +103,10 @@ def run():
     GPIO.setup(INPUT_PIN, GPIO.OUT)
 
     # Controlul stării pinului GPIO în funcție de valoarea temperaturii
-    GPIO.output(INPUT_PIN, 1)
-    time.sleep(5)
-    GPIO.output(INPUT_PIN, 0)
-
-    GPIO.cleanup()
+    GPIO.output(INPUT_PIN, True)
+    time.sleep(3)
+    GPIO.output(INPUT_PIN, Flase)
 
 
-# run()
-# time.sleep(10)
+
+run()
