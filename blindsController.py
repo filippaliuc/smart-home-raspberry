@@ -39,19 +39,19 @@ ENABLE_PIN=9
 CLOCKWISE_PIN=10
 ANTI_CLOCKWISE_PIN=11
 
-motor = Motor(CLOCKWISE_PIN, ANTI_CLOCKWISE_PIN)
+motor = Motor(ANTI_CLOCKWISE_PIN, CLOCKWISE_PIN)
 motorSwitch = LED(ENABLE_PIN)
 
-motorSpeedForward = 0.5
-motorSpeedBackward = 0.5
-
+motorSpeedForward = 1
 
 def run():
+    sleep(2)
     motorSwitch.on()
-    motor.forward(speed=motorSpeedForward)
+    sleep(2)
+    motor.forward(speed=1)
     sleep(5)
-    motor.backward(speed=motorSpeedBackward)
+    motor.backward(speed=1)
     sleep(5)
-    motorSwitch.off()
+    # motorSwitch.off()
 
 run()
