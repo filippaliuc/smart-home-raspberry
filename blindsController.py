@@ -12,13 +12,10 @@ def blinds_controller(value):
 
     GPIO.setup(CLOCKWISE_PIN, GPIO.OUT)
     GPIO.setup(ANTI_CLOCKWISE_PIN, GPIO.OUT)
-    Speed = PWM(GPIO.setup(PWM_PIN, GPIO.OUT))
+    GPIO.setup(PWM_PIN, GPIO.OUT)
 
-
-    Speed.freq(50)
-    speed = 50
-
-    Speed.duty_u16(int(speed/100*65536))
+    pwm = GPIO.PWM(ENABLE_PIN, 100)  # 100 Hz frequency
+    pwm.start(25)
 
     if value:
         GPIO.output(CLOCKWISE_PIN, GPIO.HIGH)
@@ -30,6 +27,9 @@ def blinds_controller(value):
         GPIO.output(ANTI_CLOCKWISE_PIN, GPIO.HIGH)
         sleep(2)
         GPIO.output(ANTI_CLOCKWISE_PIN, GPIO.LOW)
+    
+    pwm.stop()
+    GPIO.cleanup()
 
 blinds_controller(1)
 
