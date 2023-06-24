@@ -1,36 +1,39 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-ENABLE_PIN = 23
-CLOCKWISE_PIN = 21
-ANTI_CLOCKWISE_PIN = 19
+# Pins for Motor Driver Inputs 
+Motor1A = 19
+Motor1B = 21
+Motor1E = 23
+ 
+def setup():
+	GPIO.setmode(GPIO.BCM)				# GPIO Numbering
+	GPIO.setup(Motor1A,GPIO.OUT)  # All pins as Outputs
+	GPIO.setup(Motor1B,GPIO.OUT)
+	GPIO.setup(Motor1E,GPIO.OUT)
+ 
+def loop():
+	# Going forwards
+	GPIO.output(Motor1A,GPIO.HIGH)
+	GPIO.output(Motor1B,GPIO.LOW)
+	GPIO.output(Motor1E,GPIO.HIGH)
+ 
+	sleep(5)
+ 	# Going backwards
+	GPIO.output(Motor1A,GPIO.LOW)
+	GPIO.output(Motor1B,GPIO.HIGH)
+	GPIO.output(Motor1E,GPIO.HIGH)
+ 
+	sleep(5)
+	# Stop
+	GPIO.output(Motor1E,GPIO.LOW)
 
-def setup_gpio():
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(CLOCKWISE_PIN, GPIO.OUT)
-    GPIO.setup(ANTI_CLOCKWISE_PIN, GPIO.OUT)
-    GPIO.setup(ENABLE_PIN, GPIO.OUT)
+def destroy():	
+	GPIO.cleanup()
 
-def run():
-    setup_gpio()
-
-    try:
-        GPIO.output(ENABLE_PIN, GPIO.HIGH)
-
-        while True:
-            GPIO.output(CLOCKWISE_PIN, GPIO.HIGH)
-            GPIO.output(ANTI_CLOCKWISE_PIN, GPIO.LOW)
-            sleep(2)
-
-            GPIO.output(CLOCKWISE_PIN, GPIO.LOW)
-            GPIO.output(ANTI_CLOCKWISE_PIN, GPIO.HIGH)
-            sleep(2)
-
-    except KeyboardInterrupt:
-        GPIO.output(ENABLE_PIN, GPIO.LOW)
-
-    finally:
-        GPIO.cleanup()
-
-run()
-
+if __name__ == '__main__':     # Program start from here
+	setup()
+	try:
+    		loop()
+  	except KeyboardInterrupt:
+		destroy()
