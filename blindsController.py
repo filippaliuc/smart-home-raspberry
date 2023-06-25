@@ -3,7 +3,7 @@ import time
 
 def control_blinds(blinds_state):
 
-    global keep_track
+    global flag
 
     ENABLE_PIN = 19
     MOTOR_PIN1 = 21
@@ -16,12 +16,12 @@ def control_blinds(blinds_state):
     pwm = GPIO.PWM(ENABLE_PIN, 100)
 
     pwm.start(0)
-    print("keep_track", keep_track)
+    print("flag", flag)
     print("blinds", blinds_state)
 
-    if blinds_state and keep_track:
+    if blinds_state and flag:
             
-        keep_track = 0
+        flag = 0
 
         # Coboară jaluzelele
         GPIO.output(MOTOR_PIN1, GPIO.HIGH)
@@ -31,9 +31,9 @@ def control_blinds(blinds_state):
         pwm.ChangeDutyCycle(50)
 
         time.sleep(2)
-    elif not blinds_state and not keep_track:
+    elif not blinds_state and not flag:
 
-        keep_track = 1
+        flag = 1
 
         # Ridică jaluzelele
         GPIO.output(MOTOR_PIN1, GPIO.LOW)
