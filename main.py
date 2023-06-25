@@ -194,7 +194,7 @@ try:
             is_flame = get_flame()
 
             # Scrie în baza de date informațiile colectate de la senzori
-            # write_to_database(temperature, humidity, is_light, distance, is_flame)  
+            write_to_database(temperature, humidity, is_light, distance, is_flame)  
 
              # Scrie în Cloudwatch informațiile colectate de la senzori
             write_to_cloud(temperature, humidity, is_light, is_flame) 
