@@ -17,13 +17,14 @@ try:
     while True:
         pwm.start(0)    
         for x in range(40,100):
-            pwm.ChangeDutyCycle(50) 
+            pwm.ChangeDutyCycle(x) 
 
-        GPIO.output(MOTOR_PIN1, GPIO.LOW)
-        GPIO.output(MOTOR_PIN2, GPIO.HIGH)
+        GPIO.output(MOTOR_PIN1, GPIO.HIGH)
+        GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
-        pwm.stop()
         time.sleep(2)
+        pwm.ChangeDutyCycle(0) 
+        pwm.stop()
 except KeyboardInterrupt:
     GPIO.cleanup()
 # print("FW")
