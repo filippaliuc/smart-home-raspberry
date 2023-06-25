@@ -22,7 +22,7 @@ try:
             time.sleep(0.1)
             GPIO.output(ENABLE_PIN, GPIO.HIGH)
             GPIO.output(MOTOR_PIN1, GPIO.HIGH)
-            GPIO.output(MOTOR_PIN2, GPIO.LOW)
+            GPIO.output(MOTOR_PIN2, GPIO.HIGH)
 
         time.sleep(0.01)
         GPIO.output(ENABLE_PIN, GPIO.LOW)
