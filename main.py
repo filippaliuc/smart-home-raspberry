@@ -169,7 +169,7 @@ def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, 
 
 try: 
 
-    global flag = 1
+    flag = 1
 
     # Începe firul de execuiție al alarmei
     alarm_thread = threading.Thread(target=trigger_fire_alarm)
