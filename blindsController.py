@@ -22,18 +22,7 @@ while True:
     GPIO.output(MOTOR_PIN2, GPIO.HIGH)
 
     pwm.stop()
-    sleep(2)
-
-# GPIO.output(ENABLE_PIN, GPIO.HIGH)
-
-
-time.sleep(4)
-
-# GPIO.output(ENABLE_PIN, GPIO.LOW)
-pwm.stop()
-
-GPIO.cleanup()
-
+    time.sleep(2)
 
 # print("FW")
 
