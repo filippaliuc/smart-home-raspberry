@@ -18,9 +18,8 @@ try:
         pwm.start(0)    
         for x in range(40,100):
             pwm.ChangeDutyCycle(x) 
-
-        GPIO.output(MOTOR_PIN1, GPIO.HIGH)
-        GPIO.output(MOTOR_PIN2, GPIO.LOW)
+            GPIO.output(MOTOR_PIN1, GPIO.HIGH)
+            GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
         time.sleep(2)
         pwm.ChangeDutyCycle(0) 
