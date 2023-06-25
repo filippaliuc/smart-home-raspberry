@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
 import time
 
-def control_blinds(blinds_state):
+import flag
 
-    global flag
+def control_blinds(blinds_state):
 
     ENABLE_PIN = 19
     MOTOR_PIN1 = 21
