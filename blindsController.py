@@ -25,7 +25,6 @@ try:
         pwm.stop()
         time.sleep(2)
 except KeyboardInterrupt:
-    break
     GPIO.cleanup()
 # print("FW")
 
