@@ -1,8 +1,6 @@
 import RPi.GPIO as GPIO
 import time
 
-from machine import Pin, PWM
-
 GPIO.setmode(GPIO.BOARD)
 
 ENABLE_PIN = 32
