@@ -14,8 +14,8 @@ GPIO.setup(MOTOR_PIN2, GPIO.OUT)
 pwm = GPIO.PWM(ENABLE_PIN, 100)
 pwm.start(0)
 
-GPIO.output(MOTOR_PIN1, GPIO.HIGH)
-GPIO.output(MOTOR_PIN2, GPIO.LOW)
+GPIO.output(MOTOR_PIN1, GPIO.LOW)
+GPIO.output(MOTOR_PIN2, GPIO.HIGH)
 
 pwm.ChangeDutyCycle(50)
 
