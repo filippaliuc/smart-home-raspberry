@@ -1,61 +1,44 @@
-import RPi.GPIO as GPIO
-import time
+def control_blinds(blinds_state, keep_track):
 
-GPIO.setmode(GPIO.BOARD)
+    ENABLE_PIN = 19
+    MOTOR_PIN1 = 21
+    MOTOR_PIN2 = 23
 
-ENABLE_PIN = 32
-MOTOR_PIN1 = 19
-MOTOR_PIN2 = 21
+    GPIO.setup(ENABLE_PIN, GPIO.OUT)
+    GPIO.setup(MOTOR_PIN1, GPIO.OUT)
+    GPIO.setup(MOTOR_PIN2, GPIO.OUT)
 
-GPIO.setup(ENABLE_PIN, GPIO.OUT)
-GPIO.setup(MOTOR_PIN1, GPIO.OUT)
-GPIO.setup(MOTOR_PIN2, GPIO.OUT)
+    pwm = GPIO.PWM(ENABLE_PIN, 100)
 
-# pwm = GPIO.PWM(ENABLE_PIN, 100)
-# try: 
-#     while True:
-#         pwm.start(0)
+    try:
 
-#         # Rotate clockwise
-#         GPIO.output(MOTOR_PIN1, GPIO.HIGH)
-#         GPIO.output(MOTOR_PIN2, GPIO.LOW)
+        pwm.start(0)
+        while True:
+            if blinds_state and keep_track:
+                
+                keep_track = 0
 
-#         for dc in range(0, 101, 5):
-#             pwm.ChangeDutyCycle(dc)
-#             time.sleep(0.1)
+                # Coboară jaluzelele
+                GPIO.output(MOTOR_PIN1, GPIO.HIGH)
+                GPIO.output(MOTOR_PIN2, GPIO.LOW)
+                
 
-#         time.sleep(2)
+                pwm.ChangeDutyCycle(50)
 
-#         # Rotate counterclockwise
-#         GPIO.output(MOTOR_PIN1, GPIO.LOW)
-#         GPIO.output(MOTOR_PIN2, GPIO.HIGH)
+                time.sleep(2)
+            else if not blinds_state and not keep_track:
 
-#         for dc in range(100, -1, -5):
-#             pwm.ChangeDutyCycle(dc)
-#             time.sleep(0.1)
+                keep_track = 1
 
-#         time.sleep(2)
-# except KeyboardInterrupt:
-#     GPIO.cleanup()
-#     pwm.stop()
-print("FW")
+                # Ridică jaluzelele
+                GPIO.output(MOTOR_PIN1, GPIO.LOW)
+                GPIO.output(MOTOR_PIN2, GPIO.HIGH)
 
-GPIO.output(ENABLE_PIN, GPIO.HIGH)
-GPIO.output(MOTOR_PIN1, GPIO.HIGH)
-GPIO.output(MOTOR_PIN2, GPIO.LOW)
+                for dc in range(100, -1, -5):
+                    pwm.ChangeDutyCycle(dc)
+                    time.sleep(0.1)
 
-time.sleep(4)
+                time.sleep(2)
 
-print("BW")
-
-GPIO.output(MOTOR_PIN2, GPIO.HIGH)
-GPIO.output(MOTOR_PIN1, GPIO.LOW)
-
-
-time.sleep(4)
-
-print("stop")
-
-GPIO.output(ENABLE_PIN, GPIO.LOW)
-
-GPIO.cleanup()
+    except KeyboardInterrupt:
+        pwm.stop()

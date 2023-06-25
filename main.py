@@ -7,6 +7,7 @@ from humidityController import control_humidity
 from temperatureController import control_air_conditioner
 from buzzer import trigger_fire_alarm
 from petFeederController import feed_cat, feed_dog
+from blindsController import control_blinds
 
 from firebase import database, storage
 from cloudwatchService import cloudwatch
@@ -168,6 +169,8 @@ def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, 
 
 try: 
 
+    global flag = 1
+
     # Începe firul de execuiție al alarmei
     alarm_thread = threading.Thread(target=trigger_fire_alarm)
     alarm_thread.start()
@@ -216,6 +219,9 @@ try:
 
             # Controlează umiditatea în funcție de umiditatea setată
             control_humidity(humidity=humidity_controller)
+
+            # Controlează jaluzelele
+            control_blinds(blinds_state=blinds, keep_track=flag)
             
         except KeyboardInterrupt:
             break  
