@@ -11,11 +11,11 @@ GPIO.setup(ENABLE_PIN, GPIO.OUT)
 GPIO.setup(MOTOR_PIN1, GPIO.OUT)
 GPIO.setup(MOTOR_PIN2, GPIO.OUT)
 
-pwm = GPIO.PWM(ENABLE_PIN, 100)
-
+pwm = GPIO.PWM(ENABLE_PIN, 50)
+pwm.start(0)
 try: 
     while True:
-        pwm.start(0)    
+        pwm.start(50)    
         for x in range(40,100):
             pwm.ChangeDutyCycle(x) 
             time.sleep(0.1)
