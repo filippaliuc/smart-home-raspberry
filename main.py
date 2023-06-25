@@ -165,6 +165,8 @@ def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, 
         file.write('    Calculează predicția: ' + str(database.child("predictie").child("compute").get().val()) + '\n')
         file.write('    Predicție: ' + ('Inactiv' if not database.child("predictie").child("tip").get().val() else database.child("predictie").child("tip").get().val()) + '\n\n')
 
+flag=1 
+
 try: 
 
 
