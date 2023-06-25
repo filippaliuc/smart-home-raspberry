@@ -1,41 +1,33 @@
 import RPi.GPIO as GPIO
-from time import sleep
+import time
 
-# Define GPIO pins for Motor Driver Inputs
-Motor1A = 19
-Motor1B = 21
-Motor1E = 23
+GPIO.setmode(GPIO.BOARD)
 
-def setup():
-    GPIO.setmode(GPIO.BOARD)        # GPIO numbering mode
-    GPIO.setup(Motor1A, GPIO.OUT)   # Set pin as output
-    GPIO.setup(Motor1B, GPIO.OUT)
-    GPIO.setup(Motor1E, GPIO.OUT)
+ENABLE_PIN = 19
+MOTOR_PIN1 = 21
+MOTOR_PIN2 = 23
 
-def loop():
-    # Going forwards
-    GPIO.output(Motor1A, GPIO.HIGH)
-    GPIO.output(Motor1B, GPIO.LOW)
-    GPIO.output(Motor1E, GPIO.HIGH)
+GPIO.setup(ENABLE_PIN, GPIO.OUT)
+GPIO.setup(MOTOR_PIN1, GPIO.OUT)
+GPIO.setup(MOTOR_PIN2, GPIO.OUT)
 
-    sleep(5)
+print("FW")
 
-    # Going backwards
-    GPIO.output(Motor1A, GPIO.LOW)
-    GPIO.output(Motor1B, GPIO.HIGH)
-    GPIO.output(Motor1E, GPIO.HIGH)
+GPIO.output(ENABLE_PIN, GPIO.HIGH)
+GPIO.output(MOTOR_PIN1, GPIO.HIGH)
+GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
-    sleep(5)
+time.sleep(4)
 
-    # Stop
-    GPIO.output(Motor1E, GPIO.LOW)
+print("BW")
 
-def cleanup():
-    GPIO.cleanup()
+GPIO.output(MOTOR_PIN2, GPIO.HIGH)
+GPIO.output(MOTOR_PIN1, GPIO.LOW)
 
-if __name__ == '__main__':
-    try:
-        setup()
-        loop()
-    except KeyboardInterrupt:
-        cleanup()
+
+time.sleep(4)
+
+print("stop")
+
+GPIO.output(ENABLE_PIN, GPIO.LOW)
+GPIO.cleanup()
