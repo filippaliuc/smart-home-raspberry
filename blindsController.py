@@ -14,6 +14,7 @@ def control_blinds(blinds_state, keep_track):
     pwm = GPIO.PWM(ENABLE_PIN, 100)
 
     pwm.start(0)
+    print("keep_track", keep_track)
 
     if blinds_state and keep_track:
             
