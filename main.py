@@ -172,6 +172,8 @@ def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, 
 
 try: 
 
+    lock = threading.Lock()
+
     flag = 1
 
     # Începe firul de execuiție al alarmei
@@ -192,6 +194,7 @@ try:
 
     while True:
         try:
+            lock.aquire()
             # Obținerea informațiilor de la senzori
             temperature, humidity = get_temperature_and_humidity()
             is_light = get_light_state()  
@@ -228,6 +231,9 @@ try:
             
         except KeyboardInterrupt:
             break  
+
+        finally: 
+            lock.release()
 
 except KeyboardInterrupt:
     cleanup()  # Încheierea curățării resurselor în cazul în care se apasă combinația de taste pentru întrerupere
