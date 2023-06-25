@@ -23,7 +23,17 @@ import datetime
 GPIO.setwarnings(False)
 
 distance = 0
+flag = 1
 
+def validate_control_blinds(blinds_state):
+    global flag
+
+    if blinds_state and flag:
+        control_blinds(blinds_state)
+        flag = 0
+    elif not blinds_state and not flag:
+        control_blinds(blinds_state)
+        flag = 1
 
 def write_to_database(temperature, humidity, isLight, distance, flame):
     # Definește un dicționar pentru datele pe care dorim să le scriem în baza de date
@@ -165,11 +175,7 @@ def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, 
         file.write('    Calculează predicția: ' + str(database.child("predictie").child("compute").get().val()) + '\n')
         file.write('    Predicție: ' + ('Inactiv' if not database.child("predictie").child("tip").get().val() else database.child("predictie").child("tip").get().val()) + '\n\n')
 
-flag=1 
-
-try: 
-
-
+try:     
     # Începe firul de execuiție al alarmei
     alarm_thread = threading.Thread(target=trigger_fire_alarm)
     alarm_thread.start()
@@ -220,7 +226,7 @@ try:
             control_humidity(humidity=humidity_controller)
 
             # Controlează jaluzelele
-            control_blinds(blinds_state=blinds)
+            validate_control_blinds(blinds_state=blinds)
             
         except KeyboardInterrupt:
             break  

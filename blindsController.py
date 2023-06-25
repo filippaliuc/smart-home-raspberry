@@ -1,6 +1,5 @@
 import RPi.GPIO as GPIO
 import time
-from main import flag
 
 def control_blinds(blinds_state):
 
@@ -15,13 +14,10 @@ def control_blinds(blinds_state):
     pwm = GPIO.PWM(ENABLE_PIN, 100)
 
     pwm.start(0)
-    print("flag", flag)
     print("blinds", blinds_state)
 
-    if blinds_state and flag:
+    if blinds_state:
             
-        flag = 0
-
         # Coboară jaluzelele
         GPIO.output(MOTOR_PIN1, GPIO.HIGH)
         GPIO.output(MOTOR_PIN2, GPIO.LOW)
@@ -30,9 +26,7 @@ def control_blinds(blinds_state):
         pwm.ChangeDutyCycle(50)
 
         time.sleep(2)
-    elif not blinds_state and not flag:
-
-        flag = 1
+    elif not blinds_state:
 
         # Ridică jaluzelele
         GPIO.output(MOTOR_PIN1, GPIO.LOW)
