@@ -221,7 +221,7 @@ try:
             control_humidity(humidity=humidity_controller)
 
             # Controlează jaluzelele
-            control_blinds(blinds_state=blinds, keep_track=flag)
+            control_blinds(blinds_state=blinds)
             
         except KeyboardInterrupt:
             break  
