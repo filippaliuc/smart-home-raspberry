@@ -156,7 +156,7 @@ def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, 
     with open('runLog.txt', 'a') as file:
         file.write('Time: ' + str(current_time) + ':\n')
         file.write('    Temperatură: {0:0.1f} C Umiditate: {1:0.1f} %'.format(temperature, humidity) + ' Lumina ' + str(is_light) + ' Foc ' + str(is_flame) + ' Distanță ' + str(distance) + '\n')
-        file.write('    Alarmă: ' + str(1 if not is_flame else 0) + '\n')
+        file.write('    Alarmă: ' + str(alarm) + '\n')
         file.write('    Jaluzele: ' + str(blinds) + '\n')
         file.write('    Lumini: ' + str(lights) + '\n')
         file.write('    Centrală termica: ' + str(temperature_controller["centrala"]) + ', Aer condiționat: ' + str(temperature_controller["clima"]) + '\n')
