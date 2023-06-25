@@ -23,30 +23,25 @@ def trigger_fire_alarm():
 	PWM.start(0)
 
 	while True:
-		try: 
-			# Obținerea stării senzorului de flăcări
-			is_flame = get_flame()
+		# Obținerea stării senzorului de flăcări
+		is_flame = get_flame()
 
-			if not is_flame:
-				# Pornirea PWM la 50% pentru a genera sunetul de alarmă
-				database.child("control").child("alarma").set(0)
-				PWM.start(50)
+		if not is_flame:
+			# Pornirea PWM la 50% pentru a genera sunetul de alarmă
+			database.child("control").child("alarma").set(0)
+			PWM.start(50)
 
-				# Generarea sunetului de alarmă
-				for x in range(0, 361):
-					sin_val = math.sin(x * (math.pi / 180))
+			# Generarea sunetului de alarmă
+			for x in range(0, 361):
+				sin_val = math.sin(x * (math.pi / 180))
 
-					# Calcularea valorii tonului bazat pe valoarea sinusului
-					tone_val = 2000 + sin_val * 500
+				# Calcularea valorii tonului bazat pe valoarea sinusului
+				tone_val = 2000 + sin_val * 500
 
-					# Modificarea frecvenței PWM pentru a genera tonul corespunzător
-					PWM.ChangeFrequency(tone_val)
-					sleep(0.001)
-			else:
-				# Oprirea PWM în cazul în care nu se detectează flăcări
-				database.child("control").child("alarma").set(1)
-				PWM.stop()
-		except KeyboardInterrupt:
+				# Modificarea frecvenței PWM pentru a genera tonul corespunzător
+				PWM.ChangeFrequency(tone_val)
+				sleep(0.001)
+		else:
+			# Oprirea PWM în cazul în care nu se detectează flăcări
 			database.child("control").child("alarma").set(1)
 			PWM.stop()
-			break
