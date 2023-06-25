@@ -11,13 +11,13 @@ GPIO.setup(ENABLE_PIN, GPIO.OUT)
 GPIO.setup(MOTOR_PIN1, GPIO.OUT)
 GPIO.setup(MOTOR_PIN2, GPIO.OUT)
 
-pwm = GPIO.PWM(ENABLE_PIN, 200)
+pwm = GPIO.PWM(ENABLE_PIN, 99)
 pwm.start(0)
 
 GPIO.output(MOTOR_PIN1, GPIO.LOW)
 GPIO.output(MOTOR_PIN2, GPIO.HIGH)
 
-pwm.ChangeDutyCycle(200)
+pwm.ChangeDutyCycle(25)
 
 GPIO.output(ENABLE_PIN, GPIO.HIGH)
 
