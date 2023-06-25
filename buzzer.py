@@ -2,6 +2,7 @@ import RPi.GPIO as GPIO
 import math
 from time import sleep	
 from flameSensor import get_flame
+from firebase import database
 
 # Funcția utilizată pentru firul de execuție care pornește alarma sau oprește alarma
 def trigger_fire_alarm():
@@ -27,6 +28,7 @@ def trigger_fire_alarm():
 
 		if not is_flame:
 			# Pornirea PWM la 50% pentru a genera sunetul de alarmă
+			database.child("control").child("alarma").set(0)
 			PWM.start(50)
 
 			# Generarea sunetului de alarmă
@@ -41,4 +43,5 @@ def trigger_fire_alarm():
 				sleep(0.001)
 		else:
 			# Oprirea PWM în cazul în care nu se detectează flăcări
+			database.child("control").child("alarma").set(1)
 			PWM.stop()
