@@ -1,7 +1,9 @@
 import RPi.GPIO as GPIO
 import time
 
-def control_blinds(blinds_state, keep_track):
+def control_blinds(blinds_state):
+
+    global keep_track
 
     ENABLE_PIN = 19
     MOTOR_PIN1 = 21
