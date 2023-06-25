@@ -15,6 +15,7 @@ def control_blinds(blinds_state, keep_track):
 
     pwm.start(0)
     print("keep_track", keep_track)
+    print("blinds", blinds_state)
 
     if blinds_state and keep_track:
             
