@@ -11,23 +11,42 @@ GPIO.setup(ENABLE_PIN, GPIO.OUT)
 GPIO.setup(MOTOR_PIN1, GPIO.OUT)
 GPIO.setup(MOTOR_PIN2, GPIO.OUT)
 
-print("FW")
+pwm = GPIO.PWM(ENABLE_PIN, 100)
+pwm.start(0)
 
-GPIO.output(ENABLE_PIN, GPIO.HIGH)
 GPIO.output(MOTOR_PIN1, GPIO.HIGH)
 GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
-time.sleep(4)
+pwm.ChangeDutyCycle(50)
 
-print("BW")
-
-GPIO.output(MOTOR_PIN2, GPIO.HIGH)
-GPIO.output(MOTOR_PIN1, GPIO.LOW)
-
+GPIO.output(ENABLE_PIN, GPIO.HIGH)
 
 time.sleep(4)
-
-print("stop")
 
 GPIO.output(ENABLE_PIN, GPIO.LOW)
+pwm.stop()
+
 GPIO.cleanup()
+
+
+# print("FW")
+
+# GPIO.output(ENABLE_PIN, GPIO.HIGH)
+# GPIO.output(MOTOR_PIN1, GPIO.HIGH)
+# GPIO.output(MOTOR_PIN2, GPIO.LOW)
+
+# time.sleep(4)
+
+# print("BW")
+
+# GPIO.output(MOTOR_PIN2, GPIO.HIGH)
+# GPIO.output(MOTOR_PIN1, GPIO.LOW)
+
+
+# time.sleep(4)
+
+# print("stop")
+
+# GPIO.output(ENABLE_PIN, GPIO.LOW)
+
+# GPIO.cleanup()
