@@ -30,8 +30,10 @@ def validate_control_blinds(blinds_state):
 
     if blinds_state and flag:
         control_blinds(blinds_state)
+        print("Sa inregistrat ", blinds_state)
         flag = 0
     elif not blinds_state and not flag:
+        print("Sa inregistrat ", blinds_state)
         control_blinds(blinds_state)
         flag = 1
 
