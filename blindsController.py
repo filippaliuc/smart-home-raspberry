@@ -1,3 +1,6 @@
+import RPi.GPIO as GPIO
+import time
+
 def control_blinds(blinds_state, keep_track):
 
     ENABLE_PIN = 19
