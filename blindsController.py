@@ -17,7 +17,7 @@ pwm.start(0)
 GPIO.output(MOTOR_PIN1, GPIO.LOW)
 GPIO.output(MOTOR_PIN2, GPIO.HIGH)
 
-pwm.ChangeDutyCycle(75)
+pwm.ChangeDutyCycle(200)
 
 GPIO.output(ENABLE_PIN, GPIO.HIGH)
 
