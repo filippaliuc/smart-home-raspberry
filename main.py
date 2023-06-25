@@ -107,35 +107,38 @@ def write_to_cloud(temperature, humidity, isLight, flame):
 
 def  upload_capture_to_storage():
     while True:
-        # Setează valoarea nodului "compute" din nodul "predictie" în baza de date la 0
-        database.child("predictie").child("compute").set(0)
-        
-        # Verifică distanța față de hrănitor
-        if distance < 20 and distance > 15:
+        try: 
+            # Setează valoarea nodului "compute" din nodul "predictie" în baza de date la 0
+            database.child("predictie").child("compute").set(0)
+            
+            # Verifică distanța față de hrănitor
+            if distance < 20 and distance > 15:
 
-            # Setăm valoarea nodului "compute" din nodul "predictie" în baza de date la 1
-            database.child("predictie").child("compute").set(1)
+                # Setăm valoarea nodului "compute" din nodul "predictie" în baza de date la 1
+                database.child("predictie").child("compute").set(1)
 
-            destination_path = 'model/pet_image.jpeg'
-            image_path = "capture.jpeg"
+                destination_path = 'model/pet_image.jpeg'
+                image_path = "capture.jpeg"
 
-            # Inițializăm camera Raspberry Pi
-            camera = PiCamera()
+                # Inițializăm camera Raspberry Pi
+                camera = PiCamera()
 
-            time.sleep(2)
+                time.sleep(2)
 
-            # Capturăm imaginea
-            camera.capture(image_path)
-            print("captured", datetime.datetime.now())
+                # Capturăm imaginea
+                camera.capture(image_path)
+                print("captured", datetime.datetime.now())
 
-            # Închidem camera
-            camera.close()
+                # Închidem camera
+                camera.close()
 
-            # Încărcăm imaginea în firebase storage
-            storage.child(destination_path).put(image_path)
-            os.remove(image_path)
+                # Încărcăm imaginea în firebase storage
+                storage.child(destination_path).put(image_path)
+                os.remove(image_path)
 
-            time.sleep(2)
+                time.sleep(2)
+        except KeyboardInterrupt:
+            break
 
 def cleanup():
 

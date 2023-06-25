@@ -13,13 +13,16 @@ def feed_cat():
     # Controlul stării pinilor GPIO în funcție de predicție
 
     while True:
-        prediction = database.child("predictie").child("tip").get()
-        if prediction.val() == "Cat":
-            GPIO.output(INPUT1_PIN, GPIO.LOW)
-            print("Cat")
-            sleep(10)
-            GPIO.output(INPUT1_PIN, GPIO.HIGH)
-            sleep(30 * 60)
+        try:
+            prediction = database.child("predictie").child("tip").get()
+            if prediction.val() == "Cat":
+                GPIO.output(INPUT1_PIN, GPIO.LOW)
+                print("Cat")
+                sleep(10)
+                GPIO.output(INPUT1_PIN, GPIO.HIGH)
+                sleep(30 * 60)
+        except KeyboardInterrupt:
+            break
 
 def feed_dog():
     # Definirea pinilor GPIO pentru umidificator și dezumidificator
@@ -32,11 +35,14 @@ def feed_dog():
     # Controlul stării pinilor GPIO în funcție de predicție
 
     while True:
-        prediction = database.child("predictie").child("tip").get()
-        if prediction.val() == "Dog":
-            print("Dog")
-            GPIO.output(INPUT2_PIN, GPIO.LOW)
-            sleep(10)
-            GPIO.output(INPUT2_PIN, GPIO.HIGH)
-            sleep(30 * 60)
+        try:
+            prediction = database.child("predictie").child("tip").get()
+            if prediction.val() == "Dog":
+                print("Dog")
+                GPIO.output(INPUT2_PIN, GPIO.LOW)
+                sleep(10)
+                GPIO.output(INPUT2_PIN, GPIO.HIGH)
+                sleep(30 * 60)
+        except KeyboardInterrupt:
+            break
 
