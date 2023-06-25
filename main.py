@@ -194,7 +194,7 @@ try:
 
     while True:
         try:
-            lock.aquire()
+            lock.acquire()
             # Obținerea informațiilor de la senzori
             temperature, humidity = get_temperature_and_humidity()
             is_light = get_light_state()  
