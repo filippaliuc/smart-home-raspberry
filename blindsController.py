@@ -26,7 +26,7 @@ def control_blinds(blinds_state, keep_track):
                 pwm.ChangeDutyCycle(50)
 
                 time.sleep(2)
-            else if not blinds_state and not keep_track:
+            elif not blinds_state and not keep_track:
 
                 keep_track = 1
 
