@@ -11,24 +11,33 @@ GPIO.setup(ENABLE_PIN, GPIO.OUT)
 GPIO.setup(MOTOR_PIN1, GPIO.OUT)
 GPIO.setup(MOTOR_PIN2, GPIO.OUT)
 
-pwm = GPIO.PWM(ENABLE_PIN, 50)
-pwm.start(0)
+pwm = GPIO.PWM(ENABLE_PIN, 100)
 try: 
     while True:
-        pwm.start(50)    
-        for x in range(40,100):
-            pwm.ChangeFrequency(x) 
-            pwm.ChangeDutyCycle(x)
-            time.sleep(0.1)
-            GPIO.output(ENABLE_PIN, GPIO.HIGH)
-            GPIO.output(MOTOR_PIN1, GPIO.HIGH)
-            GPIO.output(MOTOR_PIN2, GPIO.HIGH)
+        pwm.start(0)
 
-        time.sleep(0.01)
-        GPIO.output(ENABLE_PIN, GPIO.LOW)
-        pwm.stop()
+        # Rotate clockwise
+        GPIO.output(MOTOR_PIN1, GPIO.HIGH)
+        GPIO.output(MOTOR_PIN2, GPIO.LOW)
+
+        for dc in range(0, 101, 5):
+            pwm.ChangeDutyCycle(dc)
+            time.sleep(0.1)
+
+        time.sleep(2)
+
+        # Rotate counterclockwise
+        GPIO.output(MOTOR_PIN1, GPIO.LOW)
+        GPIO.output(MOTOR_PIN2, GPIO.HIGH)
+
+        for dc in range(100, -1, -5):
+            pwm.ChangeDutyCycle(dc)
+            time.sleep(0.1)
+
+        time.sleep(2)
 except KeyboardInterrupt:
     GPIO.cleanup()
+    pwm.stop()
 # print("FW")
 
 # GPIO.output(ENABLE_PIN, GPIO.HIGH)
