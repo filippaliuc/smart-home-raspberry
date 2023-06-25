@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-import flag
+flag = 1
 
 def control_blinds(blinds_state):
 
