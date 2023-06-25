@@ -18,11 +18,13 @@ try:
         pwm.start(0)    
         for x in range(40,100):
             pwm.ChangeDutyCycle(x) 
+            GPIO.output(ENABLE_PIN, GPIO.HIGH)
             GPIO.output(MOTOR_PIN1, GPIO.HIGH)
             GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
         time.sleep(2)
         pwm.ChangeDutyCycle(0) 
+        GPIO.output(ENABLE_PIN, GPIO.LOW)
         pwm.stop()
 except KeyboardInterrupt:
     GPIO.cleanup()
