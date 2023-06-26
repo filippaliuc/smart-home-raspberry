@@ -10,7 +10,7 @@ def ping_distance_sensor():
     GPIO.output(HCSR40_TRIGGER, GPIO.LOW)
 
     # Așteaptă ca senzorul să se stabilizeze
-    time.sleep(2)
+    time.sleep(0.5)
 
     # Trezește senzorul
     GPIO.output(HCSR40_TRIGGER, GPIO.HIGH)
