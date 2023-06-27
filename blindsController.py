@@ -46,6 +46,7 @@ def control_blinds(blinds_state):
         GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
     pwm.stop()
+    GPIO.cleanup()
 
 control_blinds(1)
 
