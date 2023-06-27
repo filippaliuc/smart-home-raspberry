@@ -23,6 +23,6 @@ def control_blinds():
     GPIO.cleanup()
 
 
-control_blinds()
+# control_blinds()
 # time.sleep(4)
 # control_blinds(1)
