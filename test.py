@@ -12,15 +12,13 @@ def control_blinds():
     GPIO.setup(MOTOR_PIN1, GPIO.OUT)
     GPIO.setup(MOTOR_PIN2, GPIO.OUT)
 
-    GPIO.output(MOTOR_PIN1, GPIO.LOW)
-    GPIO.output(MOTOR_PIN2, GPIO.LOW)
-
     GPIO.output(ENABLE_PIN, GPIO.HIGH)
 
     GPIO.output(MOTOR_PIN2, GPIO.HIGH)
-    time.sleep(0.5)
+    time.sleep(2)
     GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
+    GPIO.output(ENABLE_PIN, GPIO.LOW)
     
     GPIO.cleanup()
 
