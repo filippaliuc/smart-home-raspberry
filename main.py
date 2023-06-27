@@ -199,8 +199,7 @@ try:
         print("ceva")
         try:
             # Obținerea informațiilor de la senzori
-            # temperature, humidity = get_temperature_and_humidity()
-            temperature, humidity = 1, 1
+            temperature, humidity = get_temperature_and_humidity()
 
             is_light = get_light_state()  
             distance = get_distance()  
