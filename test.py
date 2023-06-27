@@ -17,9 +17,9 @@ def control_blinds():
 
     GPIO.output(ENABLE_PIN, GPIO.HIGH)
 
-    GPIO.output(MOTOR_PIN1, GPIO.HIGH)
+    GPIO.output(MOTOR_PIN2, GPIO.HIGH)
     time.sleep(0.5)
-    GPIO.output(MOTOR_PIN1, GPIO.LOW)
+    GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
     
     GPIO.cleanup()
