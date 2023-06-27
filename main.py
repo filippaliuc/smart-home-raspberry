@@ -158,6 +158,7 @@ def cleanup():
     feed_dog_thread.join()
 
     # Eliberăm resursele GPIO
+    print("error")
     GPIO.cleanup()
 
 def write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller):
