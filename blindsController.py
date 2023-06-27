@@ -17,7 +17,7 @@ def control_blinds(blinds_state):
 
     GPIO.output(ENABLE_PIN, GPIO.HIGH)
 
-    pwm = GPIO.PWM(ENABLE_PIN, 200)
+    pwm = GPIO.PWM(ENABLE_PIN, 1000)
 
     pwm.start(100)
     print("blinds", blinds_state)
