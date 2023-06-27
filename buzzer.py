@@ -28,6 +28,7 @@ def trigger_fire_alarm():
 
 		if not is_flame:
 			# Pornirea PWM la 50% pentru a genera sunetul de alarmă
+			print("Merge")
 			database.child("control").child("alarma").set(0)
 			PWM.start(50)
 
