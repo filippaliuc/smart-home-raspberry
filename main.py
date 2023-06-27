@@ -196,6 +196,7 @@ try:
     feed_cat_thread.start()
 
     while True:
+        print("ceva")
         try:
             # Obținerea informațiilor de la senzori
             temperature, humidity = get_temperature_and_humidity()
