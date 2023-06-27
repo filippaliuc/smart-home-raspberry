@@ -51,8 +51,7 @@ def control_blinds(blinds_state):
     GPIO.output(ENABLE_PIN, GPIO.LOW)
     GPIO.cleanup()
 
-control_blinds(1)
-
-time.sleep(4)
 
 control_blinds(0)
+time.sleep(4)
+control_blinds(1)
