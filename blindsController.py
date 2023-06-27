@@ -7,13 +7,17 @@ def control_blinds(blinds_state):
     MOTOR_PIN1 = 21
     MOTOR_PIN2 = 23
 
+    GPIO.setmode(GPIO.BOARD)
     GPIO.setup(ENABLE_PIN, GPIO.OUT)
     GPIO.setup(MOTOR_PIN1, GPIO.OUT)
     GPIO.setup(MOTOR_PIN2, GPIO.OUT)
 
+    GPIO.output(MOTOR_PIN1, GPIO.LOW)
+    GPIO.output(MOTOR_PIN2, GPIO.LOW)
+
     pwm = GPIO.PWM(ENABLE_PIN, 100)
 
-    pwm.start(0)
+    pwm.start(25)
     print("blinds", blinds_state)
 
     if blinds_state:
@@ -23,9 +27,12 @@ def control_blinds(blinds_state):
         GPIO.output(MOTOR_PIN2, GPIO.LOW)
         
 
-        pwm.ChangeDutyCycle(50)
+        pwm.ChangeDutyCycle(25)
 
         time.sleep(2)
+
+        GPIO.output(MOTOR_PIN1, GPIO.LOW)
+
     elif not blinds_state:
 
         # Ridică jaluzelele
@@ -35,5 +42,7 @@ def control_blinds(blinds_state):
         pwm.ChangeDutyCycle(50)
 
         time.sleep(2)
+
+        GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
     pwm.stop()
