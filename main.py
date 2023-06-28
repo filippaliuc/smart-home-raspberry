@@ -23,7 +23,7 @@ import datetime
 GPIO.setwarnings(False)
 
 distance = 0
-flag = 1
+flag = 0
 
 def validate_control_blinds(blinds_state):
     global flag
@@ -153,7 +153,7 @@ def cleanup():
 
     # Așteptăm încheierea firelor de execuție pentru alarmă, încărcare imagine și hrănirea animalelor de companie
     alarm_thread.join()
-    send_photo_thread.join()
+    # send_photo_thread.join()
     feed_cat_thread.join()
     feed_dog_thread.join()
 
@@ -184,8 +184,8 @@ try:
     alarm_thread.start()
 
     # Începe firul de execuție al capturii încărcate în Firebase Storage
-    send_photo_thread = threading.Thread(target=upload_capture_to_storage)
-    send_photo_thread.start()
+    # send_photo_thread = threading.Thread(target=upload_capture_to_storage)
+    # send_photo_thread.start()
 
     # Începe firul de execuție al hrănitorului câinelui
     feed_dog_thread = threading.Thread(target=feed_dog)
@@ -196,7 +196,6 @@ try:
     feed_cat_thread.start()
 
     while True:
-        print("ceva")
         try:
             # Obținerea informațiilor de la senzori
             temperature, humidity = get_temperature_and_humidity()
