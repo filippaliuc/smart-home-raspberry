@@ -39,5 +39,4 @@ def feed_dog():
             sleep(10)
             GPIO.output(INPUT2_PIN, GPIO.HIGH)
             sleep(30 * 60)
-            print("Ce e asta")
 
