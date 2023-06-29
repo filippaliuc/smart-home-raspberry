@@ -23,19 +23,15 @@ import datetime
 GPIO.setwarnings(False)
 
 distance = 0
-flag = 0
+flag = None
 
 def validate_control_blinds(blinds_state):
     global flag
 
-    if blinds_state and flag:
+    if blinds_state =! flag:
         control_blinds(blinds_state)
         print("Sa inregistrat ", blinds_state)
-        flag = 0
-    elif not blinds_state and not flag:
-        print("Sa inregistrat ", blinds_state)
-        control_blinds(blinds_state)
-        flag = 1
+        flag = blinds_state
 
 def write_to_database(temperature, humidity, isLight, distance, flame):
     # Definește un dicționar pentru datele pe care dorim să le scriem în baza de date
@@ -216,7 +212,7 @@ try:
 
             # Scrie în log atât datele colectate de la senzori, cât și valorile variabilelor de stare ale controlerelor citite anterior
             write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller) 
-        
+
             # Transformă starea luminilor într-un șir binar
             binary_string_of_lights = boolean_to_binary(lights=lights)  
 
