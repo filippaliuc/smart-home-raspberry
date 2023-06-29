@@ -31,7 +31,7 @@ def control_blinds(blinds_state):
 
         pwm.ChangeDutyCycle(50)
 
-        time.sleep(2)
+        time.sleep(1.5)
 
         GPIO.output(MOTOR_PIN1, GPIO.LOW)
 
