@@ -216,7 +216,7 @@ try:
 
             # Scrie în log atât datele colectate de la senzori, cât și valorile variabilelor de stare ale controlerelor citite anterior
             write_log(temperature, is_light, distance, is_flame, alarm, blinds, lights, temperature_controller, humidity_controller) 
-
+        
             # Transformă starea luminilor într-un șir binar
             binary_string_of_lights = boolean_to_binary(lights=lights)  
 
