@@ -19,7 +19,7 @@ def control_blinds(blinds_state):
 
     pwm = GPIO.PWM(ENABLE_PIN, 100)
 
-    pwm.start(30)
+    pwm.start(50)
 
     # Go up
     if blinds_state:
@@ -29,7 +29,7 @@ def control_blinds(blinds_state):
         GPIO.output(MOTOR_PIN2, GPIO.HIGH)
         
 
-        pwm.ChangeDutyCycle(30)
+        pwm.ChangeDutyCycle(50)
 
         time.sleep(1.5)
 
@@ -42,7 +42,7 @@ def control_blinds(blinds_state):
         GPIO.output(MOTOR_PIN1, GPIO.HIGH)
         GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
-        pwm.ChangeDutyCycle(30)
+        pwm.ChangeDutyCycle(50)
 
         time.sleep(1.5)
 
