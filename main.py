@@ -23,7 +23,7 @@ import datetime
 GPIO.setwarnings(False)
 
 distance = 0
-flag = None
+flag = 1
 
 def validate_control_blinds(blinds_state):
     global flag
