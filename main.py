@@ -28,7 +28,7 @@ flag = None
 def validate_control_blinds(blinds_state):
     global flag
 
-    if blinds_state =! flag:
+    if blinds_state != flag:
         control_blinds(blinds_state)
         print("Sa inregistrat ", blinds_state)
         flag = blinds_state
