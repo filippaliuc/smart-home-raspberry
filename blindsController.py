@@ -21,7 +21,7 @@ def control_blinds(blinds_state):
 
     pwm.start(50)
 
-    # Go up
+    # Go down
     if blinds_state:
             
         # Coboară jaluzelele
@@ -35,14 +35,14 @@ def control_blinds(blinds_state):
 
         GPIO.output(MOTOR_PIN1, GPIO.LOW)
 
-    # Go down
+    # Go up
     elif not blinds_state:
 
         # Ridică jaluzelele
         GPIO.output(MOTOR_PIN1, GPIO.HIGH)
         GPIO.output(MOTOR_PIN2, GPIO.LOW)
 
-        pwm.ChangeDutyCycle(50)
+        pwm.ChangeDutyCycle(60)
 
         time.sleep(1.5)
 
